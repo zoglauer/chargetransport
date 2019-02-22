@@ -102,6 +102,8 @@ endfor
 return,pnt
 END ; wfgeom
 
+
+
 ;*****************************************************************
 ; PROCEDURE NAME: Planar_boundary
 ; PURPOSE: Apply planar boundary conditions
@@ -110,26 +112,39 @@ pro planar_bndry,a,b,c,d,g,dz1
 COMMON FLDGRID
 
 ;Right edge of detector
-blas_axpy,g,1.,replicate(1.0/DX^2,JMAX),2,[IMAX-1,0,0],3,indgen(KMAX)
+;blas_axpy,g,1.,replicate(1.0/DX^2,JMAX),2,[IMAX-1,0,0],3,KIND
+R = replicate(1.0/DX^2, JMAX)
+FOR K = 0, KMAX-1 DO G[IMAX-1, *, K] = G[IMAX-1, *, K] + R
 
 ;Left edge of detector
-blas_axpy,g,1.,replicate(1.0/DX^2,JMAX),2,[0,0,0],3,indgen(KMAX)
+;blas_axpy,g,1.,replicate(1.0/DX^2,JMAX),2,[0,0,0],3,KIND
+R = replicate(1.0/DX^2, JMAX)
+FOR K = 0, KMAX-1 DO G[0, *, K] = G[0, *, K] + R
 
 ;Back edge of detector
-blas_axpy,g,1.,replicate(1.0/DY^2,IMAX),1,[0,JMAX-1,0],3,indgen(KMAX)
+;blas_axpy,g,1.,replicate(1.0/DY^2,IMAX),1,[0,JMAX-1,0],3,KIND
+R = replicate(1.0/DY^2, IMAX)
+FOR K = 0, KMAX-1 DO G[*, JMAX-1, K] = G[*, JMAX-1, K] + R
 
 ;Front edge of detector
-blas_axpy,g,1.,replicate(1.0/DY^2,IMAX),1,[0,0,0],3,indgen(KMAX)
+;blas_axpy,g,1.,replicate(1.0/DY^2,IMAX),1,[0,0,0],3,KIND
+R = replicate(1.0/DY^2, IMAX)
+FOR K = 0, KMAX-1 DO G[*, 0, K] = G[*, 0, K] + R
 
 ;Top edge of detector
-blas_axpy,g,1.,replicate(1.0/(dz1[0,0,KMAX-1])^2,IMAX),$
-	1,[0,0,KMAX-1],2,indgen(JMAX)	;Only true when DZ1=DZ2
+;blas_axpy,g,1.,replicate(1.0/(dz1[0,0,KMAX-1])^2,IMAX),1,[0,0,KMAX-1],2,JIND	;Only true when DZ1=DZ2
+R = replicate(1.0/(dz1[0,0,KMAX-1])^2,IMAX)
+FOR J = 0, JMAX-1 DO G[*, J, KMAX-1] = G[*, J, KMAX-1] + R
 
 ;Bottom edge of detector
-blas_axpy,g,1.,replicate(1.0/(dz1[0,0,0])^2,IMAX),$
-	1,[0,0,0],2,indgen(JMAX)	;Only true when DZ1=DZ2
+;blas_axpy,g,1.,replicate(1.0/(dz1[0,0,0])^2,IMAX),1,[0,0,0],2,JIND	;Only true when DZ1=DZ2
+R = replicate(1.0/(dz1[0,0,0])^2,IMAX)
+FOR J = 0, JMAX-1 DO G[*, J, 0] = G[*, J, 0] + R
+
 return
 end ;planar_bndry
+
+
 
 ;*****************************************************************
 ; PROCEDURE NAME: Symmetric_boundary
@@ -140,31 +155,45 @@ COMMON FLDGRID
 
 ;Boundaries values
 
+
 ;Right edge of detector
-replicate_inplace,b,2.0/dx^2,2,[IMAX-1,0,0],3,indgen(KMAX)
+; KIND1=indgen(KMAX)
+; replicate_inplace,b,2.0/dx^2,2,[IMAX-1,0,0],3,KIND1
+b[IMAX-1, *, *] = 2.0/dx^2
 
 ;note that it is not necessary to set the i+1 value (a) to zero, this is done by resizing the array below. Same goes for the remaining arrays. 
-
 ;Left edge of detector
-replicate_inplace,a,2.0/dx^2,2,[0,0,0],3,indgen(KMAX)
+;KIND2=indgen(KMAX)
+;replicate_inplace,a,2.0/dx^2,2,[0,0,0],3,KIND2
+a[0, *, *] = 2.0/dx^2
 
 ;Back edge of detector
-replicate_inplace,d,2.0/dy^2,1,[0,JMAX-1,0],3,indgen(KMAX)
+;KIND3=indgen(KMAX)
+;replicate_inplace,d,2.0/dy^2,1,[0,JMAX-1,0],3,KIND3
+d[*, JMAX-1, *] = 2.0/dy^2
 
 ;Front edge of detector
-replicate_inplace,c,2.0/dy^2,1,[0,0,0],3,indgen(KMAX)
+;KIND4=indgen(KMAX)
+;replicate_inplace,c,2.0/dy^2,1,[0,0,0],3,KIND4
+c[*, 0, *] = 2.0/dy^2
 
 ;Top edge of detector
-blas_axpy,g,1.,replicate(1.0/(dz1[0,0,KMAX-1])^2,IMAX),$
-1,[0,0,KMAX-1],2,indgen(JMAX)	;Only true when DZ1=DZ2
-
+; Orig: blas_axpy,g,1.,replicate(1.0/(dz1[0,0,KMAX-1])^2,IMAX),1,[0,0,KMAX-1],2,JIND	;Only true when DZ1=DZ2
+; AZ:
+H = replicate(1.0/(dz1[0,0,KMAX-1])^2,IMAX)
+for J = 0, JMAX-1 DO G[*, J, KMAX-1] = G[*, J, KMAX-1] + H
+ 
 ;Bottom edge of detector
-blas_axpy,g,1.,replicate(1.0/(dz1[0,0,0])^2,IMAX),$
-	1,[0,0,0],2,indgen(JMAX)	;Only true when DZ1=DZ2
+; Orig: blas_axpy,g,1.,replicate(1.0/(dz1[0,0,0])^2,IMAX),1,[0,0,0],2,JIND	;Only true when DZ1=DZ2
+; AZ:
+H = replicate(1.0/(dz1[0,0,0])^2,IMAX)
+for J = 0, JMAX-1 DO G[*, J, 0] = G[*, J, 0] + H
 
      
 return
 end ;symmetric_bndry
+
+
 
 ;+****************************************************************
 ; NAME: FIELD3d
@@ -212,6 +241,7 @@ end ;symmetric_bndry
 PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
              maxits=maxits,tol=tol,condsurf100=condsurf100
 
+
   start_time=systime(1)
                        
 ; LAPLACE'S EQUATION AND BOUNDARY CONDITIONS                  
@@ -239,6 +269,7 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
   COMMON TYPES
   COMMON DETECTOR
 
+
   ;------------------
   ; SET CONDUCTIVITY
   ;------------------
@@ -247,6 +278,7 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
     CNDSURF=100.*1.0E-12
     print,'Conductivity of surface multiplied by 100'
   ENDIF
+
 
   ;-------------------------
   ; CHOOSE WFIELD OR EFIELD
@@ -288,6 +320,7 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
 
 
  pnt=call_FUNCTION(geom_funct,IMAX,JMAX,KMAX,KAIR)
+
   
   ;-------------------------
   ; SET REMAINING CONSTANTS
@@ -296,6 +329,7 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
   ;Define the maximum # of iterations 
   if not keyword_set(maxits) then MAXITS=10000 
   tol=keyword_set(tol)? tol:0 ;when the change in field values between iterations for all points is less than tol, the program is exited before reaching the max number of iterations. If it reaches MAXITS defined above (intended to be very high if it is not set by user) it will exit regardless of whether tol has been set.  
+
 
   ;------------------
   ;INITIALIZE FIELDS
@@ -308,8 +342,12 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
   dz1[*,*,kmax-kair:KMAX-1]=DZB 
   dz1[*,*,0:kair-1]=DZB
   dz2=dz1
-  replicate_inplace,dz2,DZB,1,[0,0,kmax-kair-1],2,indgen(JMAX)
-  replicate_inplace,dz2,DZB,1,[0,0,kair],2,indgen(JMAX)
+  
+  ;replicate_inplace,dz2,DZB,1,[0,0,kmax-kair-1],2,JIND
+  ;replicate_inplace,dz2,DZB,1,[0,0,kair],2,JIND
+  dz2[*,*,kmax-kair-1] = DZB
+  dz2[*,*,kair] = DZB
+  
   DZ1KJUMP=DZA
   DZ2KJUMP=DZB
   
@@ -337,57 +375,98 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
   pnt2=	(pnt eq Semiconductor) or $
     (pnt eq Air)                ;But allow h to change
 
+
   ;-------------------------
   ; CHECK FOR INITIAL GUESS
   ;-------------------------
   if keyword_set(u0)$
     then blas_axpy,u,1.0,u0*pnt2 ;Use initial guess of u[] if provided.
   
+
   ;----------------------------------------------------
   ; SET EDGE BNDRY VALUES, USE SYM OR PLANAR CONDITIONS
   ;----------------------------------------------------
+  print,bndry_type
   call_procedure,bndry_type,a,b,c,d,g,dz1 
+
+
 
   ;-----------------------------------
   ; SET CONDUCTIVITY BNDRY CONDITIONS
   ;-----------------------------------
 ;if 0 then begin ;removing for very_simple_geo test
   If keyword_set(conduct) then BEGIN
+    print,"Creating conductivity boundary conditions"
 ;   Boundary between air and detector
-;     lower bndry, air to Ge
-    replicate_inplace,f,0.0,1,[0,0,kair],2,indgen(JMAX)
-    replicate_inplace,g,-2./dx^2-2./dy^2-(CNDBULK/CNDSURF)*(1./DZ1KJUMP),1,[0,0,kair],2,indgen(JMAX)
-    replicate_inplace,e,(CNDBULK/CNDSURF)*(1./DZ1KJUMP),1,[0,0,kair],2,indgen(JMAX)
-;     upper bndry, Ge to air 
-    replicate_inplace,e,0.0,1,[0,0,kmax-kair-1],2,indgen(JMAX)
-    replicate_inplace,g,-2./dx^2-2./dy^2-(CNDBULK/CNDSURF)*(1./DZ1KJUMP),1,[0,0,kmax-kair-1],2,indgen(JMAX)
-    replicate_inplace,f,(CNDBULK/CNDSURF)*(1./DZ1KJUMP),1,[0,0,kmax-kair-1],2,indgen(JMAX)
+
+;   lower bndry, air to Ge
+    ;replicate_inplace,f,0.0,1,[0,0,kair],2,JIND
+    ;replicate_inplace,g,-2./dx^2-2./dy^2-(CNDBULK/CNDSURF)*(1./DZ1KJUMP),1,[0,0,kair],2,JIND
+    ;replicate_inplace,e,(CNDBULK/CNDSURF)*(1./DZ1KJUMP),1,[0,0,kair],2,JIND
+    
+    f[*, *, KAIR] = 0.0
+    g[*, *, KAIR] = -2./dx^2-2./dy^2-(CNDBULK/CNDSURF)*(1./DZ1KJUMP)
+    e[*, *, KAIR] = (CNDBULK/CNDSURF)*(1./DZ1KJUMP)
+    
+;   upper bndry, Ge to air 
+    ;replicate_inplace,e,0.0,1,[0,0,kmax-kair-1],2,JIND
+    ;replicate_inplace,g,-2./dx^2-2./dy^2-(CNDBULK/CNDSURF)*(1./DZ1KJUMP),1,[0,0,kmax-kair-1],2,JIND
+    ;replicate_inplace,f,(CNDBULK/CNDSURF)*(1./DZ1KJUMP),1,[0,0,kmax-kair-1],2,JIND
+    
+    e[*, *, KMAX-KAIR-1] = 0.0
+    g[*, *, KMAX-KAIR-1] = -2./dx^2-2./dy^2-(CNDBULK/CNDSURF)*(1./DZ1KJUMP)
+    f[*, *, KMAX-KAIR-1] = (CNDBULK/CNDSURF)*(1./DZ1KJUMP)
+    
   endif else begin
+  
+    print,"Creating no-conductivity boundary conditions"
+
 
   ;----------------------------------------------
   ; OR ELSE SET NO-CONDUCTIVITY BNDRY CONDITIONS
   ;---------------------------------------------- 
 ;   Boundary between air and detector
 ;     lower bndry, air to Ge
-    replicate_inplace,a,0.0,1,[0,0,kair],2,indgen(JMAX) 
-    replicate_inplace,b,0.0,1,[0,0,kair],2,indgen(JMAX)
-    replicate_inplace,c,0.0,1,[0,0,kair],2,indgen(JMAX)
-    replicate_inplace,d,0.0,1,[0,0,kair],2,indgen(JMAX)
-    replicate_inplace,f,(EPS0/EPS)*1./DZ2KJUMP,1,[0,0,kair],2,indgen(JMAX) 
-    replicate_inplace,g,(-1.0)*((EPS0/EPS/DZ2KJUMP)+1.0/DZ1KJUMP),1,[0,0,kair],2,indgen(JMAX)
-    replicate_inplace,e,1.0/DZ1KJUMP,1,[0,0,kair],2,indgen(JMAX)
+    ;replicate_inplace,a,0.0,1,[0,0,kair],2,JIND 
+    ;replicate_inplace,b,0.0,1,[0,0,kair],2,JIND
+    ;replicate_inplace,c,0.0,1,[0,0,kair],2,JIND
+    ;replicate_inplace,d,0.0,1,[0,0,kair],2,JIND
+    ;replicate_inplace,f,(EPS0/EPS)*1./DZ2KJUMP,1,[0,0,kair],2,JIND 
+    ;replicate_inplace,g,(-1.0)*((EPS0/EPS/DZ2KJUMP)+1.0/DZ1KJUMP),1,[0,0,kair],2,JIND
+    ;replicate_inplace,e,1.0/DZ1KJUMP,1,[0,0,kair],2,JIND
+    
+    a[*, *, kair] = 0.0
+    b[*, *, kair] = 0.0
+    c[*, *, kair] = 0.0
+    d[*, *, kair] = 0.0
+    e[*, *, kair] = 1.0/DZ1KJUMP
+    f[*, *, kair] = (EPS0/EPS)*1./DZ2KJUMP
+    g[*, *, kair] = (-1.0)*((EPS0/EPS/DZ2KJUMP)+1.0/DZ1KJUMP)
+    
     
 ;     upper bndry, Ge to air
 ;     notice that e,f switch when going air/Ge or Ge/air.
-    replicate_inplace,a,0.0,1,[0,0,kmax-kair-1],2,indgen(JMAX) 
-    replicate_inplace,b,0.0,1,[0,0,kmax-kair-1],2,indgen(JMAX)
-    replicate_inplace,c,0.0,1,[0,0,kmax-kair-1],2,indgen(JMAX)
-    replicate_inplace,d,0.0,1,[0,0,kmax-kair-1],2,indgen(JMAX)
-    replicate_inplace,e,(EPS0/EPS)*1./DZ2KJUMP,1,[0,0,kmax-kair-1],2,indgen(JMAX) 
-    replicate_inplace,g,(-1.0)*((EPS0/EPS/DZ2KJUMP)+1.0/DZ1KJUMP),1,[0,0,kmax-kair-1],2,indgen(JMAX)
-    replicate_inplace,f,1.0/DZ1KJUMP,1,[0,0,kmax-kair-1],2,indgen(JMAX)
+    ;replicate_inplace,a,0.0,1,[0,0,kmax-kair-1],2,JIND 
+    ;replicate_inplace,b,0.0,1,[0,0,kmax-kair-1],2,JIND
+    ;replicate_inplace,c,0.0,1,[0,0,kmax-kair-1],2,JIND
+    ;replicate_inplace,d,0.0,1,[0,0,kmax-kair-1],2,JIND
+    ;replicate_inplace,e,(EPS0/EPS)*1./DZ2KJUMP,1,[0,0,kmax-kair-1],2,JIND 
+    ;replicate_inplace,g,(-1.0)*((EPS0/EPS/DZ2KJUMP)+1.0/DZ1KJUMP),1,[0,0,kmax-kair-1],2,JIND
+    ;replicate_inplace,f,1.0/DZ1KJUMP,1,[0,0,kmax-kair-1],2,JIND
+    
+    a[*, *, kmax-kair-1] = 0.0
+    b[*, *, kmax-kair-1] = 0.0
+    c[*, *, kmax-kair-1] = 0.0
+    d[*, *, kmax-kair-1] = 0.0
+    e[*, *, kmax-kair-1] = (EPS0/EPS)*1./DZ2KJUMP
+    f[*, *, kmax-kair-1] = 1.0/DZ1KJUMP
+    g[*, *, kmax-kair-1] = (-1.0)*((EPS0/EPS/DZ2KJUMP)+1.0/DZ1KJUMP)
+    
+    print, 'AZ: Are we sure that there is no copy-and-paste error here (switch index e & f)' 
+    
   endelse
 ;endif
+
 
   ;------------------
   ; BEGIN RELAXATION
@@ -424,6 +503,8 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
 ; Actually, the optimal r_jacobi is dependent on the z-coordinate, as dz 
 ; varies. So, it may be better to set rjac and omega as arrays.
 
+
+
   ;------------------
   ; FIRST INTERATION
   ;------------------
@@ -441,7 +522,8 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
   resid[*,1:JMAX-1,*] = resid[*,1:JMAX-1,*] + d * u_odd[*,0:JMAX-2,*]
   resid[*,*,0:KMAX-2] = resid[*,*,0:KMAX-2] + e * u_odd[*,*,1:KMAX-1]
   resid[*,*,1:KMAX-1] = resid[*,*,1:KMAX-1] + f * u_odd[*,*,0:KMAX-2]
-  blas_axpy,u,(-1.)*omega,resid/g*pnt2 ;(17.5.29)
+  ; blas_axpy,u,(-1.)*omega,resid/g*pnt2 ;(17.5.29)
+  u = u + (-1.)*omega * resid/g*pnt2
   ; Note that pnt2[] keeps the fixed points unchanged.
 
   omega = 1.0/(1.0-0.5*rjac^2)  ;(17.5.30, n=1/2) Chebyshev acceleration
@@ -449,6 +531,9 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
   
 ;num0pnt2=n_elements(where(pnt2 eq 0)) ;the number of 0's which are averaged in to the mean each time. 
 ;npnt2=n_elements(pnt2)
+  
+
+
   
   ;----------------------------------
   ; MAIN LOOP - REMAINING ITERATIONS
@@ -465,7 +550,8 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
     resid[*,1:JMAX-1,*] = resid[*,1:JMAX-1,*] + d * u[*,0:JMAX-2,*]
     resid[*,*,0:KMAX-2] = resid[*,*,0:KMAX-2] + e * u[*,*,1:KMAX-1]
     resid[*,*,1:KMAX-1] = resid[*,*,1:KMAX-1] + f * u[*,*,0:KMAX-2]
-    blas_axpy,u_odd,(-1.)*omega,resid/g*pnt2 ;(17.5.29)
+    ; blas_axpy,u_odd,(-1.)*omega,resid/g*pnt2 ;(17.5.29)
+    u_odd = u_odd + (-1.)*omega * resid/g*pnt2
     
     omega = 1.0/(1.0-0.25*omega*rjac^2) ;(17.5.30, n>1/2) Chebyshev acceleration
     
@@ -477,7 +563,8 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
     resid[*,1:JMAX-1,*] = resid[*,1:JMAX-1,*] + d * u_odd[*,0:JMAX-2,*]
     resid[*,*,0:KMAX-2] = resid[*,*,0:KMAX-2] + e * u_odd[*,*,1:KMAX-1]
     resid[*,*,1:KMAX-1] = resid[*,*,1:KMAX-1] + f * u_odd[*,*,0:KMAX-2]
-    blas_axpy,u,(-1.)*omega,resid/g*pnt2 ;(17.5.29)
+    ; blas_axpy,u,(-1.)*omega,resid/g*pnt2 ;(17.5.29)
+    u = u + (-1.)*omega * resid/g*pnt2
     
 ;  tol(n)=mean(resid*pnt2/g)*npnt2/float(npnt2-num0pnt2)
 ;print,max(abs(u)),' max abs(u)',min(abs(u(where(u*pnt2 ne 0)))),' min ne 0'
@@ -486,11 +573,16 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
     omega = 1.0/(1.0-0.25*omega*rjac^2) ;(17.5.30, n>1/2) Chebyshev acceleration
   ENDWHILE
 
+
+
   ;---------------------------
   ; DONE! SAVE RESULT TO FILE
   ;--------------------------- 
-  eugrid=temporary(u)             
+  eugrid=FLOAT(temporary(u)) ; FLOAT required for GDL compatibility (IDL automaticaaly creates floats)
   SAVE,eugrid,tol,FILENAME=outfile ;Save potential grid to file 
+
+  
+  STOP
   
   ;---------------------------
   ; REPORT STATS FOR THIS RUN

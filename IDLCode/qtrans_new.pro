@@ -788,7 +788,7 @@ printf,-2,'Start time: ',systime(0)
 ;------------------------
 ;Define the COMMON BLOCKS
 ;------------------------
-resolve_routine,'qmove',/no_recompile,/is_function
+;resolve_routine,'qmove',/no_recompile,/is_function
 define_common_blks,num,/cgs	; This defines all numeric parameters.
 ;*Note that you must run define_common_blks before successfully compiling qtrans!
 COMMON FLDGRID

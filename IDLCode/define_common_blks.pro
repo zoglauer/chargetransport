@@ -58,7 +58,7 @@ common pixel,ICNTCT,ISTRIP
 ICNTCT=36;76;13 ;number of grid points in a contact strip (including both endpoints)
 ISTRIP=40;80;16 ;number of grid points in a strip/gap pair
 
-common fldgrid,IMAX,JMAX,KMAX,KAIR,DX,DY,DZA,DZB,HEIGHT,NSTRIP
+common fldgrid,IMAX,IIND,JMAX,JIND,KMAX,KIND,KAIR,DX,DY,DZA,DZB,HEIGHT,NSTRIP
   ; used in field3d, capcalc, qtrans and plotfield (and their subroutines)
 
 ;Define the size of the GRID                 
@@ -73,6 +73,10 @@ KMAX=107;171;107                         ;# of z gridpoints
 ;kmax=30
 ;KMAX=77
 kair=5;10;5                          ;size of air buffer top and bottom
+
+IIND=indgen(IMAX)
+JIND=indgen(JMAX)
+KIND=indgen(KMAX)
 
 NSTRIP=fix((IMAX-1)/ISTRIP)        ;istrip defined above         
 DX=double(8.e-3)/float(imax-1)
@@ -197,6 +201,6 @@ common FACTOR_CAL, fac_e, fac_h
  efield_tolerance=1.0e-20
 
 COMMON DIR,  outfile_dir
-outfile_dir='/home/zkliu/G_NCT_analysis/dcal/QfieldSim'
+outfile_dir='.'
 
 end

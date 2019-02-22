@@ -1,5 +1,5 @@
 ;.com define_common_blks.pro
-;define_common_blks,/cgs
+define_common_blks,/cgs
 ;.com field3d.pro
 ;.com vectgrid.pro
 pro make_vfield,num
