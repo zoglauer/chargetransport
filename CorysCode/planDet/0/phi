@@ -1,0 +1,50 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      phi;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 2 -3 0 0 -1 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    side1
+    {
+        type            zeroGradient;
+    }
+
+    side2
+    {
+        type            zeroGradient;
+    }
+
+    side3
+    {
+        type            zeroGradient;
+    }
+
+    side4
+    {
+        type            zeroGradient;
+    }
+
+    front
+    {
+				type      groovyBC;
+      	valueExpression "1000.0";
+				gradientExpression "0";
+				fractionExpression "( pos().x >= 0.00325 && pos().x <= 0.005  && pos().y >= 0.00325 && pos().y <= 0.07525 ) ? 1 : 0";
+	      value     uniform 0;
+		}
+
+    back
+    {
+        type            fixedValue;
+				value						uniform -1000.0;
+    }
+}
