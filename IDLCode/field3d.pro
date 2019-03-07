@@ -582,8 +582,6 @@ PRO field3d,num,outfile,wfield=wfield,conduct=conduct,$
   SAVE,eugrid,tol,FILENAME=outfile ;Save potential grid to file 
 
   
-  STOP
-  
   ;---------------------------
   ; REPORT STATS FOR THIS RUN
   ;---------------------------
