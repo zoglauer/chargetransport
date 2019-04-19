@@ -1,0 +1,2064 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : dev-b3003ab5be1e
+Exec   : spacechargeelectrostaticFoam
+Date   : Apr 18 2019
+Time   : 13:42:05
+Host   : "JDESKTOP"
+PID    : 1800
+I/O    : uncollated
+Case   : /home/jgarg20/chargetransport/CorysCode/weightingField
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1251
+    dlopen error : libsimpleSwakFunctionObjects.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 105
+    could not load "libsimpleSwakFunctionObjects.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1251
+    dlopen error : libswakFunctionObjects.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 105
+    could not load "libswakFunctionObjects.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1251
+    dlopen error : libgroovyBC.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 105
+    could not load "libgroovyBC.so"
+Create mesh for time = 0
+
+Reading physicalProperties
+
+Reading field phi
+
+Reading field rho
+
+--> FOAM Warning : 
+    From function bool Foam::GeometricField<Type, PatchField, GeoMesh>::readIfPresent() [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]
+    in file /opt/openfoam-dev/src/OpenFOAM/lnInclude/GeometricField.C at line 105
+    read option IOobject::MUST_READ or MUST_READ_IF_MODIFIED suggests that a read constructor for field rho1 would be more appropriate.
+
+Starting iteration loop
+
+Iteration = 5e-05
+
+DICPCG:  Solving for phi, Initial residual = 1, Final residual = 0.0925932, No Iterations 4
+ExecutionTime = 0.12 s  ClockTime = 1 s
+
+Iteration = 0.0001
+
+DICPCG:  Solving for phi, Initial residual = 0.0209355, Final residual = 0.00359446, No Iterations 11
+ExecutionTime = 0.14 s  ClockTime = 1 s
+
+Iteration = 0.00015
+
+DICPCG:  Solving for phi, Initial residual = 0.00511532, Final residual = 0.000772369, No Iterations 17
+ExecutionTime = 0.14 s  ClockTime = 1 s
+
+Iteration = 0.0002
+
+DICPCG:  Solving for phi, Initial residual = 0.00290582, Final residual = 0.000523707, No Iterations 10
+ExecutionTime = 0.16 s  ClockTime = 1 s
+
+Iteration = 0.00025
+
+DICPCG:  Solving for phi, Initial residual = 0.00198364, Final residual = 0.000376617, No Iterations 7
+ExecutionTime = 0.16 s  ClockTime = 1 s
+
+Iteration = 0.0003
+
+DICPCG:  Solving for phi, Initial residual = 0.00122608, Final residual = 0.000219507, No Iterations 15
+ExecutionTime = 0.17 s  ClockTime = 1 s
+
+Iteration = 0.00035
+
+DICPCG:  Solving for phi, Initial residual = 0.000884378, Final residual = 0.000142643, No Iterations 7
+ExecutionTime = 0.17 s  ClockTime = 1 s
+
+Iteration = 0.0004
+
+DICPCG:  Solving for phi, Initial residual = 0.000825859, Final residual = 0.000122549, No Iterations 7
+ExecutionTime = 0.17 s  ClockTime = 1 s
+
+Iteration = 0.00045
+
+DICPCG:  Solving for phi, Initial residual = 0.000728559, Final residual = 0.000144408, No Iterations 5
+ExecutionTime = 0.17 s  ClockTime = 1 s
+
+Iteration = 0.0005
+
+DICPCG:  Solving for phi, Initial residual = 0.000653585, Final residual = 9.30554e-05, No Iterations 6
+ExecutionTime = 0.19 s  ClockTime = 1 s
+
+Iteration = 0.00055
+
+DICPCG:  Solving for phi, Initial residual = 0.000608701, Final residual = 0.000103193, No Iterations 5
+ExecutionTime = 0.19 s  ClockTime = 1 s
+
+Iteration = 0.0006
+
+DICPCG:  Solving for phi, Initial residual = 0.000581135, Final residual = 0.000101111, No Iterations 5
+ExecutionTime = 0.19 s  ClockTime = 1 s
+
+Iteration = 0.00065
+
+DICPCG:  Solving for phi, Initial residual = 0.000542848, Final residual = 8.95742e-05, No Iterations 5
+ExecutionTime = 0.19 s  ClockTime = 1 s
+
+Iteration = 0.0007
+
+DICPCG:  Solving for phi, Initial residual = 0.000526284, Final residual = 8.41113e-05, No Iterations 5
+ExecutionTime = 0.2 s  ClockTime = 1 s
+
+Iteration = 0.00075
+
+DICPCG:  Solving for phi, Initial residual = 0.000503983, Final residual = 7.59736e-05, No Iterations 5
+ExecutionTime = 0.2 s  ClockTime = 1 s
+
+Iteration = 0.0008
+
+DICPCG:  Solving for phi, Initial residual = 0.000492481, Final residual = 7.16838e-05, No Iterations 5
+ExecutionTime = 0.2 s  ClockTime = 1 s
+
+Iteration = 0.00085
+
+DICPCG:  Solving for phi, Initial residual = 0.000477548, Final residual = 6.65769e-05, No Iterations 5
+ExecutionTime = 0.2 s  ClockTime = 1 s
+
+Iteration = 0.0009
+
+DICPCG:  Solving for phi, Initial residual = 0.000467167, Final residual = 6.36862e-05, No Iterations 5
+ExecutionTime = 0.22 s  ClockTime = 1 s
+
+Iteration = 0.00095
+
+DICPCG:  Solving for phi, Initial residual = 0.000456176, Final residual = 6.07428e-05, No Iterations 5
+ExecutionTime = 0.22 s  ClockTime = 1 s
+
+Iteration = 0.001
+
+DICPCG:  Solving for phi, Initial residual = 0.000447478, Final residual = 5.89688e-05, No Iterations 5
+ExecutionTime = 0.22 s  ClockTime = 1 s
+
+Iteration = 0.00105
+
+DICPCG:  Solving for phi, Initial residual = 0.000439115, Final residual = 5.76098e-05, No Iterations 5
+ExecutionTime = 0.23 s  ClockTime = 1 s
+
+Iteration = 0.0011
+
+DICPCG:  Solving for phi, Initial residual = 0.000432203, Final residual = 5.72823e-05, No Iterations 5
+ExecutionTime = 0.23 s  ClockTime = 1 s
+
+Iteration = 0.00115
+
+DICPCG:  Solving for phi, Initial residual = 0.000425949, Final residual = 5.78353e-05, No Iterations 5
+ExecutionTime = 0.23 s  ClockTime = 1 s
+
+Iteration = 0.0012
+
+DICPCG:  Solving for phi, Initial residual = 0.000420928, Final residual = 5.94974e-05, No Iterations 5
+ExecutionTime = 0.23 s  ClockTime = 1 s
+
+Iteration = 0.00125
+
+DICPCG:  Solving for phi, Initial residual = 0.000416934, Final residual = 6.22793e-05, No Iterations 5
+ExecutionTime = 0.23 s  ClockTime = 1 s
+
+Iteration = 0.0013
+
+DICPCG:  Solving for phi, Initial residual = 0.000413533, Final residual = 6.62701e-05, No Iterations 5
+ExecutionTime = 0.25 s  ClockTime = 1 s
+
+Iteration = 0.00135
+
+DICPCG:  Solving for phi, Initial residual = 0.000410961, Final residual = 7.14122e-05, No Iterations 5
+ExecutionTime = 0.25 s  ClockTime = 1 s
+
+Iteration = 0.0014
+
+DICPCG:  Solving for phi, Initial residual = 0.000409088, Final residual = 7.76765e-05, No Iterations 5
+ExecutionTime = 0.25 s  ClockTime = 1 s
+
+Iteration = 0.00145
+
+DICPCG:  Solving for phi, Initial residual = 0.000407808, Final residual = 7.80056e-05, No Iterations 6
+ExecutionTime = 0.27 s  ClockTime = 1 s
+
+Iteration = 0.0015
+
+DICPCG:  Solving for phi, Initial residual = 0.000415081, Final residual = 7.84053e-05, No Iterations 12
+ExecutionTime = 0.27 s  ClockTime = 1 s
+
+Iteration = 0.00155
+
+DICPCG:  Solving for phi, Initial residual = 0.000441155, Final residual = 7.3858e-05, No Iterations 5
+ExecutionTime = 0.27 s  ClockTime = 1 s
+
+Iteration = 0.0016
+
+DICPCG:  Solving for phi, Initial residual = 0.00041888, Final residual = 7.00754e-05, No Iterations 6
+ExecutionTime = 0.27 s  ClockTime = 1 s
+
+Iteration = 0.00165
+
+DICPCG:  Solving for phi, Initial residual = 0.000411703, Final residual = 8.04219e-05, No Iterations 12
+ExecutionTime = 0.28 s  ClockTime = 1 s
+
+Iteration = 0.0017
+
+DICPCG:  Solving for phi, Initial residual = 0.000434363, Final residual = 8.04841e-05, No Iterations 5
+ExecutionTime = 0.28 s  ClockTime = 1 s
+
+Iteration = 0.00175
+
+DICPCG:  Solving for phi, Initial residual = 0.00041628, Final residual = 7.6237e-05, No Iterations 6
+ExecutionTime = 0.3 s  ClockTime = 1 s
+
+Iteration = 0.0018
+
+DICPCG:  Solving for phi, Initial residual = 0.000404656, Final residual = 6.47793e-05, No Iterations 13
+ExecutionTime = 0.3 s  ClockTime = 1 s
+
+Iteration = 0.00185
+
+DICPCG:  Solving for phi, Initial residual = 0.000450059, Final residual = 6.80368e-05, No Iterations 6
+ExecutionTime = 0.3 s  ClockTime = 1 s
+
+Iteration = 0.0019
+
+DICPCG:  Solving for phi, Initial residual = 0.000418034, Final residual = 6.31556e-05, No Iterations 13
+ExecutionTime = 0.31 s  ClockTime = 1 s
+
+Iteration = 0.00195
+
+DICPCG:  Solving for phi, Initial residual = 0.000440269, Final residual = 6.69475e-05, No Iterations 6
+ExecutionTime = 0.31 s  ClockTime = 1 s
+
+Iteration = 0.002
+
+DICPCG:  Solving for phi, Initial residual = 0.000408716, Final residual = 7.86434e-05, No Iterations 2
+ExecutionTime = 0.31 s  ClockTime = 1 s
+
+Iteration = 0.00205
+
+DICPCG:  Solving for phi, Initial residual = 0.000389008, Final residual = 7.41545e-05, No Iterations 13
+ExecutionTime = 0.33 s  ClockTime = 1 s
+
+Iteration = 0.0021
+
+DICPCG:  Solving for phi, Initial residual = 0.000442972, Final residual = 8.30131e-05, No Iterations 6
+ExecutionTime = 0.33 s  ClockTime = 1 s
+
+Iteration = 0.00215
+
+DICPCG:  Solving for phi, Initial residual = 0.000405834, Final residual = 7.36155e-05, No Iterations 13
+ExecutionTime = 0.34 s  ClockTime = 1 s
+
+Iteration = 0.0022
+
+DICPCG:  Solving for phi, Initial residual = 0.000438374, Final residual = 7.94946e-05, No Iterations 6
+ExecutionTime = 0.34 s  ClockTime = 1 s
+
+Iteration = 0.00225
+
+DICPCG:  Solving for phi, Initial residual = 0.000401729, Final residual = 7.30693e-05, No Iterations 13
+ExecutionTime = 0.36 s  ClockTime = 1 s
+
+Iteration = 0.0023
+
+DICPCG:  Solving for phi, Initial residual = 0.000437796, Final residual = 8.26563e-05, No Iterations 6
+ExecutionTime = 0.36 s  ClockTime = 1 s
+
+Iteration = 0.00235
+
+DICPCG:  Solving for phi, Initial residual = 0.000401073, Final residual = 7.65165e-05, No Iterations 13
+ExecutionTime = 0.37 s  ClockTime = 1 s
+
+Iteration = 0.0024
+
+DICPCG:  Solving for phi, Initial residual = 0.000437563, Final residual = 8.57026e-05, No Iterations 6
+ExecutionTime = 0.37 s  ClockTime = 1 s
+
+Iteration = 0.00245
+
+DICPCG:  Solving for phi, Initial residual = 0.000400941, Final residual = 7.00502e-05, No Iterations 14
+ExecutionTime = 0.37 s  ClockTime = 1 s
+
+Iteration = 0.0025
+
+DICPCG:  Solving for phi, Initial residual = 0.000446048, Final residual = 8.83833e-05, No Iterations 6
+ExecutionTime = 0.39 s  ClockTime = 1 s
+
+Iteration = 0.00255
+
+DICPCG:  Solving for phi, Initial residual = 0.000402068, Final residual = 6.9488e-05, No Iterations 14
+ExecutionTime = 0.39 s  ClockTime = 1 s
+
+Iteration = 0.0026
+
+DICPCG:  Solving for phi, Initial residual = 0.000446307, Final residual = 8.83124e-05, No Iterations 9
+ExecutionTime = 0.39 s  ClockTime = 1 s
+
+Iteration = 0.00265
+
+DICPCG:  Solving for phi, Initial residual = 0.000418186, Final residual = 6.40163e-05, No Iterations 14
+ExecutionTime = 0.41 s  ClockTime = 1 s
+
+Iteration = 0.0027
+
+DICPCG:  Solving for phi, Initial residual = 0.000439271, Final residual = 8.49878e-05, No Iterations 6
+ExecutionTime = 0.41 s  ClockTime = 1 s
+
+Iteration = 0.00275
+
+DICPCG:  Solving for phi, Initial residual = 0.000398765, Final residual = 5.88569e-05, No Iterations 14
+ExecutionTime = 0.42 s  ClockTime = 1 s
+
+Iteration = 0.0028
+
+DICPCG:  Solving for phi, Initial residual = 0.000434142, Final residual = 8.52108e-05, No Iterations 9
+ExecutionTime = 0.42 s  ClockTime = 1 s
+
+Iteration = 0.00285
+
+DICPCG:  Solving for phi, Initial residual = 0.000412318, Final residual = 6.54591e-05, No Iterations 14
+ExecutionTime = 0.42 s  ClockTime = 1 s
+
+Iteration = 0.0029
+
+DICPCG:  Solving for phi, Initial residual = 0.000435341, Final residual = 8.59778e-05, No Iterations 6
+ExecutionTime = 0.44 s  ClockTime = 1 s
+
+Iteration = 0.00295
+
+DICPCG:  Solving for phi, Initial residual = 0.000394806, Final residual = 7.20954e-05, No Iterations 14
+ExecutionTime = 0.44 s  ClockTime = 1 s
+
+Iteration = 0.003
+
+DICPCG:  Solving for phi, Initial residual = 0.000431791, Final residual = 8.25095e-05, No Iterations 11
+ExecutionTime = 0.45 s  ClockTime = 1 s
+
+Iteration = 0.00305
+
+DICPCG:  Solving for phi, Initial residual = 0.000388642, Final residual = 7.20039e-05, No Iterations 14
+ExecutionTime = 0.45 s  ClockTime = 1 s
+
+Iteration = 0.0031
+
+DICPCG:  Solving for phi, Initial residual = 0.000426507, Final residual = 8.07069e-05, No Iterations 6
+ExecutionTime = 0.47 s  ClockTime = 1 s
+
+Iteration = 0.00315
+
+DICPCG:  Solving for phi, Initial residual = 0.000390651, Final residual = 7.4789e-05, No Iterations 14
+ExecutionTime = 0.47 s  ClockTime = 1 s
+
+Iteration = 0.0032
+
+DICPCG:  Solving for phi, Initial residual = 0.000429268, Final residual = 8.54947e-05, No Iterations 6
+ExecutionTime = 0.47 s  ClockTime = 1 s
+
+Iteration = 0.00325
+
+DICPCG:  Solving for phi, Initial residual = 0.000382345, Final residual = 5.92846e-05, No Iterations 16
+ExecutionTime = 0.48 s  ClockTime = 1 s
+
+Iteration = 0.0033
+
+DICPCG:  Solving for phi, Initial residual = 0.000428294, Final residual = 8.33956e-05, No Iterations 9
+ExecutionTime = 0.48 s  ClockTime = 1 s
+
+Iteration = 0.00335
+
+DICPCG:  Solving for phi, Initial residual = 0.000392986, Final residual = 7.42168e-05, No Iterations 15
+ExecutionTime = 0.5 s  ClockTime = 1 s
+
+Iteration = 0.0034
+
+DICPCG:  Solving for phi, Initial residual = 0.000418753, Final residual = 7.77355e-05, No Iterations 6
+ExecutionTime = 0.5 s  ClockTime = 1 s
+
+Iteration = 0.00345
+
+DICPCG:  Solving for phi, Initial residual = 0.000375832, Final residual = 6.0028e-05, No Iterations 16
+ExecutionTime = 0.52 s  ClockTime = 1 s
+
+Iteration = 0.0035
+
+DICPCG:  Solving for phi, Initial residual = 0.000413329, Final residual = 7.80274e-05, No Iterations 9
+ExecutionTime = 0.52 s  ClockTime = 1 s
+
+Iteration = 0.00355
+
+DICPCG:  Solving for phi, Initial residual = 0.000384656, Final residual = 7.49736e-05, No Iterations 14
+ExecutionTime = 0.52 s  ClockTime = 1 s
+
+Iteration = 0.0036
+
+DICPCG:  Solving for phi, Initial residual = 0.000400406, Final residual = 7.30341e-05, No Iterations 6
+ExecutionTime = 0.53 s  ClockTime = 1 s
+
+Iteration = 0.00365
+
+DICPCG:  Solving for phi, Initial residual = 0.000365972, Final residual = 5.80936e-05, No Iterations 16
+ExecutionTime = 0.53 s  ClockTime = 1 s
+
+Iteration = 0.0037
+
+DICPCG:  Solving for phi, Initial residual = 0.000405438, Final residual = 7.5106e-05, No Iterations 7
+ExecutionTime = 0.55 s  ClockTime = 1 s
+
+Iteration = 0.00375
+
+DICPCG:  Solving for phi, Initial residual = 0.000362361, Final residual = 5.68503e-05, No Iterations 16
+ExecutionTime = 0.55 s  ClockTime = 1 s
+
+Iteration = 0.0038
+
+DICPCG:  Solving for phi, Initial residual = 0.000393178, Final residual = 7.85147e-05, No Iterations 6
+ExecutionTime = 0.55 s  ClockTime = 1 s
+
+Iteration = 0.00385
+
+DICPCG:  Solving for phi, Initial residual = 0.000364511, Final residual = 5.71925e-05, No Iterations 16
+ExecutionTime = 0.56 s  ClockTime = 1 s
+
+Iteration = 0.0039
+
+DICPCG:  Solving for phi, Initial residual = 0.00038557, Final residual = 7.43635e-05, No Iterations 5
+ExecutionTime = 0.56 s  ClockTime = 1 s
+
+Iteration = 0.00395
+
+DICPCG:  Solving for phi, Initial residual = 0.000355912, Final residual = 5.8357e-05, No Iterations 16
+ExecutionTime = 0.56 s  ClockTime = 1 s
+
+Iteration = 0.004
+
+DICPCG:  Solving for phi, Initial residual = 0.000371431, Final residual = 6.95043e-05, No Iterations 5
+ExecutionTime = 0.56 s  ClockTime = 1 s
+
+Iteration = 0.00405
+
+DICPCG:  Solving for phi, Initial residual = 0.000350126, Final residual = 6.97974e-05, No Iterations 5
+ExecutionTime = 0.56 s  ClockTime = 1 s
+
+Iteration = 0.0041
+
+DICPCG:  Solving for phi, Initial residual = 0.00032329, Final residual = 4.13753e-05, No Iterations 16
+ExecutionTime = 0.58 s  ClockTime = 1 s
+
+Iteration = 0.00415
+
+DICPCG:  Solving for phi, Initial residual = 0.000375208, Final residual = 7.43834e-05, No Iterations 5
+ExecutionTime = 0.58 s  ClockTime = 1 s
+
+Iteration = 0.0042
+
+DICPCG:  Solving for phi, Initial residual = 0.000339211, Final residual = 5.15349e-05, No Iterations 16
+ExecutionTime = 0.59 s  ClockTime = 1 s
+
+Iteration = 0.00425
+
+DICPCG:  Solving for phi, Initial residual = 0.00035511, Final residual = 5.96284e-05, No Iterations 5
+ExecutionTime = 0.59 s  ClockTime = 1 s
+
+Iteration = 0.0043
+
+DICPCG:  Solving for phi, Initial residual = 0.000333599, Final residual = 5.85056e-05, No Iterations 5
+ExecutionTime = 0.61 s  ClockTime = 1 s
+
+Iteration = 0.00435
+
+DICPCG:  Solving for phi, Initial residual = 0.000318429, Final residual = 6.13735e-05, No Iterations 5
+ExecutionTime = 0.61 s  ClockTime = 1 s
+
+Iteration = 0.0044
+
+DICPCG:  Solving for phi, Initial residual = 0.00031564, Final residual = 5.95309e-05, No Iterations 15
+ExecutionTime = 0.61 s  ClockTime = 1 s
+
+Iteration = 0.00445
+
+DICPCG:  Solving for phi, Initial residual = 0.000354427, Final residual = 6.32816e-05, No Iterations 5
+ExecutionTime = 0.61 s  ClockTime = 1 s
+
+Iteration = 0.0045
+
+DICPCG:  Solving for phi, Initial residual = 0.000325023, Final residual = 5.51159e-05, No Iterations 5
+ExecutionTime = 0.62 s  ClockTime = 1 s
+
+Iteration = 0.00455
+
+DICPCG:  Solving for phi, Initial residual = 0.000308417, Final residual = 5.53654e-05, No Iterations 5
+ExecutionTime = 0.62 s  ClockTime = 1 s
+
+Iteration = 0.0046
+
+DICPCG:  Solving for phi, Initial residual = 0.000306342, Final residual = 5.9656e-05, No Iterations 5
+ExecutionTime = 0.62 s  ClockTime = 1 s
+
+Iteration = 0.00465
+
+DICPCG:  Solving for phi, Initial residual = 0.000303203, Final residual = 5.63244e-05, No Iterations 15
+ExecutionTime = 0.64 s  ClockTime = 1 s
+
+Iteration = 0.0047
+
+DICPCG:  Solving for phi, Initial residual = 0.000343126, Final residual = 5.74203e-05, No Iterations 5
+ExecutionTime = 0.64 s  ClockTime = 1 s
+
+Iteration = 0.00475
+
+DICPCG:  Solving for phi, Initial residual = 0.000314786, Final residual = 4.91767e-05, No Iterations 5
+ExecutionTime = 0.64 s  ClockTime = 1 s
+
+Iteration = 0.0048
+
+DICPCG:  Solving for phi, Initial residual = 0.000295498, Final residual = 4.83946e-05, No Iterations 5
+ExecutionTime = 0.66 s  ClockTime = 1 s
+
+Iteration = 0.00485
+
+DICPCG:  Solving for phi, Initial residual = 0.000295959, Final residual = 5.04844e-05, No Iterations 5
+ExecutionTime = 0.66 s  ClockTime = 1 s
+
+Iteration = 0.0049
+
+DICPCG:  Solving for phi, Initial residual = 0.000293244, Final residual = 5.19687e-05, No Iterations 5
+ExecutionTime = 0.66 s  ClockTime = 1 s
+
+Iteration = 0.00495
+
+DICPCG:  Solving for phi, Initial residual = 0.000292297, Final residual = 5.29237e-05, No Iterations 5
+ExecutionTime = 0.66 s  ClockTime = 1 s
+
+Iteration = 0.005
+
+DICPCG:  Solving for phi, Initial residual = 0.000290673, Final residual = 5.31847e-05, No Iterations 5
+ExecutionTime = 0.68 s  ClockTime = 1 s
+
+Iteration = 0.00505
+
+DICPCG:  Solving for phi, Initial residual = 0.00028953, Final residual = 5.28528e-05, No Iterations 5
+ExecutionTime = 0.68 s  ClockTime = 1 s
+
+Iteration = 0.0051
+
+DICPCG:  Solving for phi, Initial residual = 0.000288172, Final residual = 5.2106e-05, No Iterations 5
+ExecutionTime = 0.68 s  ClockTime = 1 s
+
+Iteration = 0.00515
+
+DICPCG:  Solving for phi, Initial residual = 0.000286995, Final residual = 5.11197e-05, No Iterations 5
+ExecutionTime = 0.7 s  ClockTime = 1 s
+
+Iteration = 0.0052
+
+DICPCG:  Solving for phi, Initial residual = 0.000285636, Final residual = 4.98358e-05, No Iterations 5
+ExecutionTime = 0.7 s  ClockTime = 1 s
+
+Iteration = 0.00525
+
+DICPCG:  Solving for phi, Initial residual = 0.000284285, Final residual = 4.84103e-05, No Iterations 5
+ExecutionTime = 0.7 s  ClockTime = 1 s
+
+Iteration = 0.0053
+
+DICPCG:  Solving for phi, Initial residual = 0.00028297, Final residual = 4.69226e-05, No Iterations 5
+ExecutionTime = 0.71 s  ClockTime = 1 s
+
+Iteration = 0.00535
+
+DICPCG:  Solving for phi, Initial residual = 0.00028162, Final residual = 4.53866e-05, No Iterations 5
+ExecutionTime = 0.71 s  ClockTime = 1 s
+
+Iteration = 0.0054
+
+DICPCG:  Solving for phi, Initial residual = 0.000280279, Final residual = 4.38449e-05, No Iterations 5
+ExecutionTime = 0.71 s  ClockTime = 1 s
+
+Iteration = 0.00545
+
+DICPCG:  Solving for phi, Initial residual = 0.000278945, Final residual = 4.23456e-05, No Iterations 5
+ExecutionTime = 0.71 s  ClockTime = 1 s
+
+Iteration = 0.0055
+
+DICPCG:  Solving for phi, Initial residual = 0.000277626, Final residual = 4.09236e-05, No Iterations 5
+ExecutionTime = 0.73 s  ClockTime = 1 s
+
+Iteration = 0.00555
+
+DICPCG:  Solving for phi, Initial residual = 0.000276336, Final residual = 3.96059e-05, No Iterations 5
+ExecutionTime = 0.73 s  ClockTime = 1 s
+
+Iteration = 0.0056
+
+DICPCG:  Solving for phi, Initial residual = 0.000274981, Final residual = 3.84507e-05, No Iterations 5
+ExecutionTime = 0.73 s  ClockTime = 1 s
+
+Iteration = 0.00565
+
+DICPCG:  Solving for phi, Initial residual = 0.000273544, Final residual = 3.74566e-05, No Iterations 5
+ExecutionTime = 0.73 s  ClockTime = 1 s
+
+Iteration = 0.0057
+
+DICPCG:  Solving for phi, Initial residual = 0.000272111, Final residual = 3.66133e-05, No Iterations 5
+ExecutionTime = 0.74 s  ClockTime = 1 s
+
+Iteration = 0.00575
+
+DICPCG:  Solving for phi, Initial residual = 0.000270847, Final residual = 3.5968e-05, No Iterations 5
+ExecutionTime = 0.74 s  ClockTime = 1 s
+
+Iteration = 0.0058
+
+DICPCG:  Solving for phi, Initial residual = 0.000269791, Final residual = 3.55639e-05, No Iterations 5
+ExecutionTime = 0.74 s  ClockTime = 1 s
+
+Iteration = 0.00585
+
+DICPCG:  Solving for phi, Initial residual = 0.000268839, Final residual = 3.54317e-05, No Iterations 5
+ExecutionTime = 0.74 s  ClockTime = 1 s
+
+Iteration = 0.0059
+
+DICPCG:  Solving for phi, Initial residual = 0.000267995, Final residual = 3.55989e-05, No Iterations 5
+ExecutionTime = 0.76 s  ClockTime = 1 s
+
+Iteration = 0.00595
+
+DICPCG:  Solving for phi, Initial residual = 0.000267244, Final residual = 3.60991e-05, No Iterations 5
+ExecutionTime = 0.76 s  ClockTime = 1 s
+
+Iteration = 0.006
+
+DICPCG:  Solving for phi, Initial residual = 0.000266618, Final residual = 3.6916e-05, No Iterations 5
+ExecutionTime = 0.76 s  ClockTime = 1 s
+
+Iteration = 0.00605
+
+DICPCG:  Solving for phi, Initial residual = 0.000266096, Final residual = 3.80272e-05, No Iterations 5
+ExecutionTime = 0.76 s  ClockTime = 1 s
+
+Iteration = 0.0061
+
+DICPCG:  Solving for phi, Initial residual = 0.000265561, Final residual = 3.94303e-05, No Iterations 5
+ExecutionTime = 0.78 s  ClockTime = 1 s
+
+Iteration = 0.00615
+
+DICPCG:  Solving for phi, Initial residual = 0.000265105, Final residual = 4.11588e-05, No Iterations 5
+ExecutionTime = 0.78 s  ClockTime = 1 s
+
+Iteration = 0.0062
+
+DICPCG:  Solving for phi, Initial residual = 0.000264942, Final residual = 4.31868e-05, No Iterations 5
+ExecutionTime = 0.78 s  ClockTime = 1 s
+
+Iteration = 0.00625
+
+DICPCG:  Solving for phi, Initial residual = 0.000265121, Final residual = 4.54986e-05, No Iterations 5
+ExecutionTime = 0.78 s  ClockTime = 1 s
+
+Iteration = 0.0063
+
+DICPCG:  Solving for phi, Initial residual = 0.000265683, Final residual = 4.80704e-05, No Iterations 5
+ExecutionTime = 0.79 s  ClockTime = 1 s
+
+Iteration = 0.00635
+
+DICPCG:  Solving for phi, Initial residual = 0.000266429, Final residual = 5.09182e-05, No Iterations 5
+ExecutionTime = 0.79 s  ClockTime = 1 s
+
+Iteration = 0.0064
+
+DICPCG:  Solving for phi, Initial residual = 0.000267401, Final residual = 4.68727e-05, No Iterations 6
+ExecutionTime = 0.79 s  ClockTime = 1 s
+
+Iteration = 0.00645
+
+DICPCG:  Solving for phi, Initial residual = 0.000271345, Final residual = 5.35683e-05, No Iterations 6
+ExecutionTime = 0.81 s  ClockTime = 1 s
+
+Iteration = 0.0065
+
+DICPCG:  Solving for phi, Initial residual = 0.000276331, Final residual = 5.17667e-05, No Iterations 12
+ExecutionTime = 0.81 s  ClockTime = 1 s
+
+Iteration = 0.00655
+
+DICPCG:  Solving for phi, Initial residual = 0.000305383, Final residual = 4.26531e-05, No Iterations 5
+ExecutionTime = 0.81 s  ClockTime = 1 s
+
+Iteration = 0.0066
+
+DICPCG:  Solving for phi, Initial residual = 0.00028224, Final residual = 5.13558e-05, No Iterations 5
+ExecutionTime = 0.82 s  ClockTime = 1 s
+
+Iteration = 0.00665
+
+DICPCG:  Solving for phi, Initial residual = 0.000279178, Final residual = 4.97321e-05, No Iterations 6
+ExecutionTime = 0.82 s  ClockTime = 1 s
+
+Iteration = 0.0067
+
+DICPCG:  Solving for phi, Initial residual = 0.000281307, Final residual = 3.99244e-05, No Iterations 14
+ExecutionTime = 0.82 s  ClockTime = 1 s
+
+Iteration = 0.00675
+
+DICPCG:  Solving for phi, Initial residual = 0.000316118, Final residual = 5.13915e-05, No Iterations 5
+ExecutionTime = 0.82 s  ClockTime = 1 s
+
+Iteration = 0.0068
+
+DICPCG:  Solving for phi, Initial residual = 0.000296732, Final residual = 5.50387e-05, No Iterations 5
+ExecutionTime = 0.84 s  ClockTime = 1 s
+
+Iteration = 0.00685
+
+DICPCG:  Solving for phi, Initial residual = 0.000283749, Final residual = 5.62779e-05, No Iterations 6
+ExecutionTime = 0.84 s  ClockTime = 1 s
+
+Iteration = 0.0069
+
+DICPCG:  Solving for phi, Initial residual = 0.000289947, Final residual = 4.50084e-05, No Iterations 14
+ExecutionTime = 0.84 s  ClockTime = 1 s
+
+Iteration = 0.00695
+
+DICPCG:  Solving for phi, Initial residual = 0.000324813, Final residual = 5.84438e-05, No Iterations 5
+ExecutionTime = 0.85 s  ClockTime = 1 s
+
+Iteration = 0.007
+
+DICPCG:  Solving for phi, Initial residual = 0.000304434, Final residual = 5.99001e-05, No Iterations 6
+ExecutionTime = 0.85 s  ClockTime = 1 s
+
+Iteration = 0.00705
+
+DICPCG:  Solving for phi, Initial residual = 0.000298006, Final residual = 5.61961e-05, No Iterations 11
+ExecutionTime = 0.85 s  ClockTime = 1 s
+
+Iteration = 0.0071
+
+DICPCG:  Solving for phi, Initial residual = 0.000303691, Final residual = 5.59735e-05, No Iterations 4
+ExecutionTime = 0.85 s  ClockTime = 1 s
+
+Iteration = 0.00715
+
+DICPCG:  Solving for phi, Initial residual = 0.000302318, Final residual = 5.98572e-05, No Iterations 3
+ExecutionTime = 0.87 s  ClockTime = 1 s
+
+Iteration = 0.0072
+
+DICPCG:  Solving for phi, Initial residual = 0.000305982, Final residual = 5.63384e-05, No Iterations 14
+ExecutionTime = 0.87 s  ClockTime = 1 s
+
+Iteration = 0.00725
+
+DICPCG:  Solving for phi, Initial residual = 0.000348816, Final residual = 6.96733e-05, No Iterations 5
+ExecutionTime = 0.87 s  ClockTime = 1 s
+
+Iteration = 0.0073
+
+DICPCG:  Solving for phi, Initial residual = 0.000313692, Final residual = 6.07249e-05, No Iterations 4
+ExecutionTime = 0.88 s  ClockTime = 1 s
+
+Iteration = 0.00735
+
+DICPCG:  Solving for phi, Initial residual = 0.000305672, Final residual = 5.69347e-05, No Iterations 14
+ExecutionTime = 0.88 s  ClockTime = 1 s
+
+Iteration = 0.0074
+
+DICPCG:  Solving for phi, Initial residual = 0.00035496, Final residual = 6.81562e-05, No Iterations 6
+ExecutionTime = 0.88 s  ClockTime = 1 s
+
+Iteration = 0.00745
+
+DICPCG:  Solving for phi, Initial residual = 0.000327822, Final residual = 6.48987e-05, No Iterations 3
+ExecutionTime = 0.88 s  ClockTime = 1 s
+
+Iteration = 0.0075
+
+DICPCG:  Solving for phi, Initial residual = 0.000315439, Final residual = 5.07153e-05, No Iterations 14
+ExecutionTime = 0.9 s  ClockTime = 1 s
+
+Iteration = 0.00755
+
+DICPCG:  Solving for phi, Initial residual = 0.000353021, Final residual = 6.93794e-05, No Iterations 6
+ExecutionTime = 0.9 s  ClockTime = 1 s
+
+Iteration = 0.0076
+
+DICPCG:  Solving for phi, Initial residual = 0.00033069, Final residual = 6.01939e-05, No Iterations 4
+ExecutionTime = 0.9 s  ClockTime = 1 s
+
+Iteration = 0.00765
+
+DICPCG:  Solving for phi, Initial residual = 0.000306516, Final residual = 5.12653e-05, No Iterations 14
+ExecutionTime = 0.92 s  ClockTime = 1 s
+
+Iteration = 0.0077
+
+DICPCG:  Solving for phi, Initial residual = 0.000354785, Final residual = 7.04713e-05, No Iterations 6
+ExecutionTime = 0.92 s  ClockTime = 1 s
+
+Iteration = 0.00775
+
+DICPCG:  Solving for phi, Initial residual = 0.000331327, Final residual = 6.19263e-05, No Iterations 4
+ExecutionTime = 0.92 s  ClockTime = 1 s
+
+Iteration = 0.0078
+
+DICPCG:  Solving for phi, Initial residual = 0.000309118, Final residual = 5.40388e-05, No Iterations 14
+ExecutionTime = 0.93 s  ClockTime = 1 s
+
+Iteration = 0.00785
+
+DICPCG:  Solving for phi, Initial residual = 0.000348756, Final residual = 6.95154e-05, No Iterations 6
+ExecutionTime = 0.93 s  ClockTime = 1 s
+
+Iteration = 0.0079
+
+DICPCG:  Solving for phi, Initial residual = 0.000335013, Final residual = 6.4836e-05, No Iterations 4
+ExecutionTime = 0.93 s  ClockTime = 1 s
+
+Iteration = 0.00795
+
+DICPCG:  Solving for phi, Initial residual = 0.000310721, Final residual = 5.53105e-05, No Iterations 15
+ExecutionTime = 0.95 s  ClockTime = 1 s
+
+Iteration = 0.008
+
+DICPCG:  Solving for phi, Initial residual = 0.000352081, Final residual = 6.90833e-05, No Iterations 6
+ExecutionTime = 0.95 s  ClockTime = 1 s
+
+Iteration = 0.00805
+
+DICPCG:  Solving for phi, Initial residual = 0.000330961, Final residual = 6.03856e-05, No Iterations 14
+ExecutionTime = 0.95 s  ClockTime = 1 s
+
+Iteration = 0.0081
+
+DICPCG:  Solving for phi, Initial residual = 0.000328224, Final residual = 6.09651e-05, No Iterations 6
+ExecutionTime = 0.96 s  ClockTime = 1 s
+
+Iteration = 0.00815
+
+DICPCG:  Solving for phi, Initial residual = 0.000325651, Final residual = 6.49295e-05, No Iterations 7
+ExecutionTime = 0.96 s  ClockTime = 1 s
+
+Iteration = 0.0082
+
+DICPCG:  Solving for phi, Initial residual = 0.000309124, Final residual = 5.38953e-05, No Iterations 14
+ExecutionTime = 0.96 s  ClockTime = 1 s
+
+Iteration = 0.00825
+
+DICPCG:  Solving for phi, Initial residual = 0.000344785, Final residual = 5.77321e-05, No Iterations 6
+ExecutionTime = 0.98 s  ClockTime = 1 s
+
+Iteration = 0.0083
+
+DICPCG:  Solving for phi, Initial residual = 0.000324053, Final residual = 6.36763e-05, No Iterations 6
+ExecutionTime = 0.98 s  ClockTime = 1 s
+
+Iteration = 0.00835
+
+DICPCG:  Solving for phi, Initial residual = 0.000306568, Final residual = 5.47305e-05, No Iterations 14
+ExecutionTime = 0.98 s  ClockTime = 2 s
+
+Iteration = 0.0084
+
+DICPCG:  Solving for phi, Initial residual = 0.000339747, Final residual = 5.5552e-05, No Iterations 6
+ExecutionTime = 0.99 s  ClockTime = 2 s
+
+Iteration = 0.00845
+
+DICPCG:  Solving for phi, Initial residual = 0.000314545, Final residual = 5.96713e-05, No Iterations 6
+ExecutionTime = 0.99 s  ClockTime = 2 s
+
+Iteration = 0.0085
+
+DICPCG:  Solving for phi, Initial residual = 0.000301712, Final residual = 5.23206e-05, No Iterations 14
+ExecutionTime = 1.01 s  ClockTime = 2 s
+
+Iteration = 0.00855
+
+DICPCG:  Solving for phi, Initial residual = 0.000334616, Final residual = 5.2754e-05, No Iterations 6
+ExecutionTime = 1.01 s  ClockTime = 2 s
+
+Iteration = 0.0086
+
+DICPCG:  Solving for phi, Initial residual = 0.00030932, Final residual = 5.57674e-05, No Iterations 6
+ExecutionTime = 1.01 s  ClockTime = 2 s
+
+Iteration = 0.00865
+
+DICPCG:  Solving for phi, Initial residual = 0.000297437, Final residual = 5.05627e-05, No Iterations 14
+ExecutionTime = 1.03 s  ClockTime = 2 s
+
+Iteration = 0.0087
+
+DICPCG:  Solving for phi, Initial residual = 0.000327427, Final residual = 4.94906e-05, No Iterations 6
+ExecutionTime = 1.03 s  ClockTime = 2 s
+
+Iteration = 0.00875
+
+DICPCG:  Solving for phi, Initial residual = 0.000305258, Final residual = 5.29025e-05, No Iterations 6
+ExecutionTime = 1.03 s  ClockTime = 2 s
+
+Iteration = 0.0088
+
+DICPCG:  Solving for phi, Initial residual = 0.000292726, Final residual = 5.07046e-05, No Iterations 14
+ExecutionTime = 1.04 s  ClockTime = 2 s
+
+Iteration = 0.00885
+
+DICPCG:  Solving for phi, Initial residual = 0.000323574, Final residual = 6.36694e-05, No Iterations 5
+ExecutionTime = 1.04 s  ClockTime = 2 s
+
+Iteration = 0.0089
+
+DICPCG:  Solving for phi, Initial residual = 0.000297862, Final residual = 4.97038e-05, No Iterations 6
+ExecutionTime = 1.04 s  ClockTime = 2 s
+
+Iteration = 0.00895
+
+DICPCG:  Solving for phi, Initial residual = 0.00028523, Final residual = 4.99716e-05, No Iterations 14
+ExecutionTime = 1.06 s  ClockTime = 2 s
+
+Iteration = 0.009
+
+DICPCG:  Solving for phi, Initial residual = 0.000313894, Final residual = 5.84785e-05, No Iterations 5
+ExecutionTime = 1.06 s  ClockTime = 2 s
+
+Iteration = 0.00905
+
+DICPCG:  Solving for phi, Initial residual = 0.000291261, Final residual = 5.72638e-05, No Iterations 5
+ExecutionTime = 1.06 s  ClockTime = 2 s
+
+Iteration = 0.0091
+
+DICPCG:  Solving for phi, Initial residual = 0.000275491, Final residual = 5.3759e-05, No Iterations 6
+ExecutionTime = 1.06 s  ClockTime = 2 s
+
+Iteration = 0.00915
+
+DICPCG:  Solving for phi, Initial residual = 0.000280379, Final residual = 5.57525e-05, No Iterations 13
+ExecutionTime = 1.07 s  ClockTime = 2 s
+
+Iteration = 0.0092
+
+DICPCG:  Solving for phi, Initial residual = 0.000310451, Final residual = 5.36823e-05, No Iterations 5
+ExecutionTime = 1.07 s  ClockTime = 2 s
+
+Iteration = 0.00925
+
+DICPCG:  Solving for phi, Initial residual = 0.000279982, Final residual = 5.26914e-05, No Iterations 5
+ExecutionTime = 1.09 s  ClockTime = 2 s
+
+Iteration = 0.0093
+
+DICPCG:  Solving for phi, Initial residual = 0.000271442, Final residual = 5.24236e-05, No Iterations 5
+ExecutionTime = 1.09 s  ClockTime = 2 s
+
+Iteration = 0.00935
+
+DICPCG:  Solving for phi, Initial residual = 0.000267903, Final residual = 4.23751e-05, No Iterations 14
+ExecutionTime = 1.09 s  ClockTime = 2 s
+
+Iteration = 0.0094
+
+DICPCG:  Solving for phi, Initial residual = 0.000293807, Final residual = 4.7184e-05, No Iterations 5
+ExecutionTime = 1.1 s  ClockTime = 2 s
+
+Iteration = 0.00945
+
+DICPCG:  Solving for phi, Initial residual = 0.00027464, Final residual = 4.50945e-05, No Iterations 5
+ExecutionTime = 1.1 s  ClockTime = 2 s
+
+Iteration = 0.0095
+
+DICPCG:  Solving for phi, Initial residual = 0.000264626, Final residual = 4.49064e-05, No Iterations 5
+ExecutionTime = 1.1 s  ClockTime = 2 s
+
+Iteration = 0.00955
+
+DICPCG:  Solving for phi, Initial residual = 0.00026324, Final residual = 4.67574e-05, No Iterations 5
+ExecutionTime = 1.1 s  ClockTime = 2 s
+
+Iteration = 0.0096
+
+DICPCG:  Solving for phi, Initial residual = 0.000262594, Final residual = 4.804e-05, No Iterations 5
+ExecutionTime = 1.12 s  ClockTime = 2 s
+
+Iteration = 0.00965
+
+DICPCG:  Solving for phi, Initial residual = 0.000262195, Final residual = 4.89501e-05, No Iterations 5
+ExecutionTime = 1.12 s  ClockTime = 2 s
+
+Iteration = 0.0097
+
+DICPCG:  Solving for phi, Initial residual = 0.000262073, Final residual = 4.93981e-05, No Iterations 5
+ExecutionTime = 1.12 s  ClockTime = 2 s
+
+Iteration = 0.00975
+
+DICPCG:  Solving for phi, Initial residual = 0.000262224, Final residual = 4.94684e-05, No Iterations 5
+ExecutionTime = 1.13 s  ClockTime = 2 s
+
+Iteration = 0.0098
+
+DICPCG:  Solving for phi, Initial residual = 0.000262358, Final residual = 4.91914e-05, No Iterations 5
+ExecutionTime = 1.13 s  ClockTime = 2 s
+
+Iteration = 0.00985
+
+DICPCG:  Solving for phi, Initial residual = 0.00026242, Final residual = 4.8618e-05, No Iterations 5
+ExecutionTime = 1.13 s  ClockTime = 2 s
+
+Iteration = 0.0099
+
+DICPCG:  Solving for phi, Initial residual = 0.000262358, Final residual = 4.78176e-05, No Iterations 5
+ExecutionTime = 1.15 s  ClockTime = 2 s
+
+Iteration = 0.00995
+
+DICPCG:  Solving for phi, Initial residual = 0.000262185, Final residual = 4.68526e-05, No Iterations 5
+ExecutionTime = 1.15 s  ClockTime = 2 s
+
+Iteration = 0.01
+
+DICPCG:  Solving for phi, Initial residual = 0.000261883, Final residual = 4.57595e-05, No Iterations 5
+ExecutionTime = 1.17 s  ClockTime = 2 s
+
+Iteration = 0.01005
+
+DICPCG:  Solving for phi, Initial residual = 0.000261423, Final residual = 4.46299e-05, No Iterations 5
+ExecutionTime = 1.17 s  ClockTime = 2 s
+
+Iteration = 0.0101
+
+DICPCG:  Solving for phi, Initial residual = 0.000260827, Final residual = 4.34978e-05, No Iterations 5
+ExecutionTime = 1.18 s  ClockTime = 2 s
+
+Iteration = 0.01015
+
+DICPCG:  Solving for phi, Initial residual = 0.000260191, Final residual = 4.23707e-05, No Iterations 5
+ExecutionTime = 1.18 s  ClockTime = 2 s
+
+Iteration = 0.0102
+
+DICPCG:  Solving for phi, Initial residual = 0.000259693, Final residual = 4.12704e-05, No Iterations 5
+ExecutionTime = 1.18 s  ClockTime = 2 s
+
+Iteration = 0.01025
+
+DICPCG:  Solving for phi, Initial residual = 0.000259122, Final residual = 4.0214e-05, No Iterations 5
+ExecutionTime = 1.18 s  ClockTime = 2 s
+
+Iteration = 0.0103
+
+DICPCG:  Solving for phi, Initial residual = 0.000258432, Final residual = 3.91926e-05, No Iterations 5
+ExecutionTime = 1.2 s  ClockTime = 2 s
+
+Iteration = 0.01035
+
+DICPCG:  Solving for phi, Initial residual = 0.00025763, Final residual = 3.82214e-05, No Iterations 5
+ExecutionTime = 1.2 s  ClockTime = 2 s
+
+Iteration = 0.0104
+
+DICPCG:  Solving for phi, Initial residual = 0.000256671, Final residual = 3.73172e-05, No Iterations 5
+ExecutionTime = 1.2 s  ClockTime = 2 s
+
+Iteration = 0.01045
+
+DICPCG:  Solving for phi, Initial residual = 0.000255693, Final residual = 3.64669e-05, No Iterations 5
+ExecutionTime = 1.2 s  ClockTime = 2 s
+
+Iteration = 0.0105
+
+DICPCG:  Solving for phi, Initial residual = 0.000254716, Final residual = 3.56608e-05, No Iterations 5
+ExecutionTime = 1.21 s  ClockTime = 2 s
+
+Iteration = 0.01055
+
+DICPCG:  Solving for phi, Initial residual = 0.000253688, Final residual = 3.49014e-05, No Iterations 5
+ExecutionTime = 1.21 s  ClockTime = 2 s
+
+Iteration = 0.0106
+
+DICPCG:  Solving for phi, Initial residual = 0.000252684, Final residual = 3.42078e-05, No Iterations 5
+ExecutionTime = 1.21 s  ClockTime = 2 s
+
+Iteration = 0.01065
+
+DICPCG:  Solving for phi, Initial residual = 0.000251618, Final residual = 3.35738e-05, No Iterations 5
+ExecutionTime = 1.23 s  ClockTime = 2 s
+
+Iteration = 0.0107
+
+DICPCG:  Solving for phi, Initial residual = 0.000250396, Final residual = 3.30054e-05, No Iterations 5
+ExecutionTime = 1.23 s  ClockTime = 2 s
+
+Iteration = 0.01075
+
+DICPCG:  Solving for phi, Initial residual = 0.000249077, Final residual = 3.25172e-05, No Iterations 5
+ExecutionTime = 1.23 s  ClockTime = 2 s
+
+Iteration = 0.0108
+
+DICPCG:  Solving for phi, Initial residual = 0.00024782, Final residual = 3.21167e-05, No Iterations 5
+ExecutionTime = 1.23 s  ClockTime = 2 s
+
+Iteration = 0.01085
+
+DICPCG:  Solving for phi, Initial residual = 0.000246528, Final residual = 3.17992e-05, No Iterations 5
+ExecutionTime = 1.24 s  ClockTime = 2 s
+
+Iteration = 0.0109
+
+DICPCG:  Solving for phi, Initial residual = 0.00024514, Final residual = 3.15646e-05, No Iterations 5
+ExecutionTime = 1.24 s  ClockTime = 2 s
+
+Iteration = 0.01095
+
+DICPCG:  Solving for phi, Initial residual = 0.000243735, Final residual = 3.14094e-05, No Iterations 5
+ExecutionTime = 1.24 s  ClockTime = 2 s
+
+Iteration = 0.011
+
+DICPCG:  Solving for phi, Initial residual = 0.000242426, Final residual = 3.13535e-05, No Iterations 5
+ExecutionTime = 1.24 s  ClockTime = 2 s
+
+Iteration = 0.01105
+
+DICPCG:  Solving for phi, Initial residual = 0.000241288, Final residual = 3.14035e-05, No Iterations 5
+ExecutionTime = 1.26 s  ClockTime = 2 s
+
+Iteration = 0.0111
+
+DICPCG:  Solving for phi, Initial residual = 0.000240297, Final residual = 3.15778e-05, No Iterations 5
+ExecutionTime = 1.26 s  ClockTime = 2 s
+
+Iteration = 0.01115
+
+DICPCG:  Solving for phi, Initial residual = 0.000239451, Final residual = 3.18746e-05, No Iterations 5
+ExecutionTime = 1.26 s  ClockTime = 2 s
+
+Iteration = 0.0112
+
+DICPCG:  Solving for phi, Initial residual = 0.000238681, Final residual = 3.22815e-05, No Iterations 5
+ExecutionTime = 1.26 s  ClockTime = 2 s
+
+Iteration = 0.01125
+
+DICPCG:  Solving for phi, Initial residual = 0.000238213, Final residual = 3.27994e-05, No Iterations 5
+ExecutionTime = 1.28 s  ClockTime = 2 s
+
+Iteration = 0.0113
+
+DICPCG:  Solving for phi, Initial residual = 0.000237826, Final residual = 3.33992e-05, No Iterations 5
+ExecutionTime = 1.28 s  ClockTime = 2 s
+
+Iteration = 0.01135
+
+DICPCG:  Solving for phi, Initial residual = 0.000237681, Final residual = 3.40745e-05, No Iterations 5
+ExecutionTime = 1.28 s  ClockTime = 2 s
+
+Iteration = 0.0114
+
+DICPCG:  Solving for phi, Initial residual = 0.000237902, Final residual = 3.48207e-05, No Iterations 5
+ExecutionTime = 1.28 s  ClockTime = 2 s
+
+Iteration = 0.01145
+
+DICPCG:  Solving for phi, Initial residual = 0.000238218, Final residual = 3.56323e-05, No Iterations 5
+ExecutionTime = 1.29 s  ClockTime = 2 s
+
+Iteration = 0.0115
+
+DICPCG:  Solving for phi, Initial residual = 0.000238638, Final residual = 3.65233e-05, No Iterations 5
+ExecutionTime = 1.29 s  ClockTime = 2 s
+
+Iteration = 0.01155
+
+DICPCG:  Solving for phi, Initial residual = 0.000239079, Final residual = 3.75042e-05, No Iterations 5
+ExecutionTime = 1.29 s  ClockTime = 2 s
+
+Iteration = 0.0116
+
+DICPCG:  Solving for phi, Initial residual = 0.000239431, Final residual = 3.85881e-05, No Iterations 5
+ExecutionTime = 1.31 s  ClockTime = 2 s
+
+Iteration = 0.01165
+
+DICPCG:  Solving for phi, Initial residual = 0.000239853, Final residual = 3.97844e-05, No Iterations 5
+ExecutionTime = 1.31 s  ClockTime = 2 s
+
+Iteration = 0.0117
+
+DICPCG:  Solving for phi, Initial residual = 0.000240331, Final residual = 4.10766e-05, No Iterations 5
+ExecutionTime = 1.31 s  ClockTime = 2 s
+
+Iteration = 0.01175
+
+DICPCG:  Solving for phi, Initial residual = 0.000240996, Final residual = 4.24591e-05, No Iterations 5
+ExecutionTime = 1.32 s  ClockTime = 2 s
+
+Iteration = 0.0118
+
+DICPCG:  Solving for phi, Initial residual = 0.000241827, Final residual = 4.39547e-05, No Iterations 5
+ExecutionTime = 1.32 s  ClockTime = 2 s
+
+Iteration = 0.01185
+
+DICPCG:  Solving for phi, Initial residual = 0.000242877, Final residual = 4.55674e-05, No Iterations 5
+ExecutionTime = 1.32 s  ClockTime = 2 s
+
+Iteration = 0.0119
+
+DICPCG:  Solving for phi, Initial residual = 0.000244148, Final residual = 4.73336e-05, No Iterations 5
+ExecutionTime = 1.32 s  ClockTime = 2 s
+
+Iteration = 0.01195
+
+DICPCG:  Solving for phi, Initial residual = 0.000245579, Final residual = 4.32704e-05, No Iterations 6
+ExecutionTime = 1.34 s  ClockTime = 2 s
+
+Iteration = 0.012
+
+DICPCG:  Solving for phi, Initial residual = 0.000248436, Final residual = 4.80655e-05, No Iterations 6
+ExecutionTime = 1.34 s  ClockTime = 2 s
+
+Iteration = 0.01205
+
+DICPCG:  Solving for phi, Initial residual = 0.000250567, Final residual = 4.927e-05, No Iterations 6
+ExecutionTime = 1.34 s  ClockTime = 2 s
+
+Iteration = 0.0121
+
+DICPCG:  Solving for phi, Initial residual = 0.000249779, Final residual = 4.31986e-05, No Iterations 12
+ExecutionTime = 1.35 s  ClockTime = 2 s
+
+Iteration = 0.01215
+
+DICPCG:  Solving for phi, Initial residual = 0.000274317, Final residual = 5.45423e-05, No Iterations 3
+ExecutionTime = 1.35 s  ClockTime = 2 s
+
+Iteration = 0.0122
+
+DICPCG:  Solving for phi, Initial residual = 0.000258396, Final residual = 4.81563e-05, No Iterations 3
+ExecutionTime = 1.35 s  ClockTime = 2 s
+
+Iteration = 0.01225
+
+DICPCG:  Solving for phi, Initial residual = 0.000253437, Final residual = 4.80782e-05, No Iterations 3
+ExecutionTime = 1.35 s  ClockTime = 2 s
+
+Iteration = 0.0123
+
+DICPCG:  Solving for phi, Initial residual = 0.00025338, Final residual = 3.34266e-05, No Iterations 14
+ExecutionTime = 1.37 s  ClockTime = 2 s
+
+Iteration = 0.01235
+
+DICPCG:  Solving for phi, Initial residual = 0.000279244, Final residual = 5.4378e-05, No Iterations 3
+ExecutionTime = 1.37 s  ClockTime = 2 s
+
+Iteration = 0.0124
+
+DICPCG:  Solving for phi, Initial residual = 0.000266677, Final residual = 4.76735e-05, No Iterations 3
+ExecutionTime = 1.37 s  ClockTime = 2 s
+
+Iteration = 0.01245
+
+DICPCG:  Solving for phi, Initial residual = 0.000263543, Final residual = 4.71382e-05, No Iterations 3
+ExecutionTime = 1.37 s  ClockTime = 2 s
+
+Iteration = 0.0125
+
+DICPCG:  Solving for phi, Initial residual = 0.000259324, Final residual = 4.83646e-05, No Iterations 3
+ExecutionTime = 1.37 s  ClockTime = 2 s
+
+Iteration = 0.01255
+
+DICPCG:  Solving for phi, Initial residual = 0.000255865, Final residual = 5.00681e-05, No Iterations 3
+ExecutionTime = 1.38 s  ClockTime = 2 s
+
+Iteration = 0.0126
+
+DICPCG:  Solving for phi, Initial residual = 0.000253298, Final residual = 4.54721e-05, No Iterations 14
+ExecutionTime = 1.38 s  ClockTime = 2 s
+
+Iteration = 0.01265
+
+DICPCG:  Solving for phi, Initial residual = 0.000300414, Final residual = 5.83779e-05, No Iterations 5
+ExecutionTime = 1.38 s  ClockTime = 2 s
+
+Iteration = 0.0127
+
+DICPCG:  Solving for phi, Initial residual = 0.000266576, Final residual = 5.01026e-05, No Iterations 3
+ExecutionTime = 1.38 s  ClockTime = 2 s
+
+Iteration = 0.01275
+
+DICPCG:  Solving for phi, Initial residual = 0.000260563, Final residual = 5.0095e-05, No Iterations 3
+ExecutionTime = 1.4 s  ClockTime = 2 s
+
+Iteration = 0.0128
+
+DICPCG:  Solving for phi, Initial residual = 0.000258202, Final residual = 4.07501e-05, No Iterations 14
+ExecutionTime = 1.4 s  ClockTime = 2 s
+
+Iteration = 0.01285
+
+DICPCG:  Solving for phi, Initial residual = 0.000289442, Final residual = 5.69518e-05, No Iterations 4
+ExecutionTime = 1.42 s  ClockTime = 2 s
+
+Iteration = 0.0129
+
+DICPCG:  Solving for phi, Initial residual = 0.000266285, Final residual = 5.08643e-05, No Iterations 3
+ExecutionTime = 1.42 s  ClockTime = 2 s
+
+Iteration = 0.01295
+
+DICPCG:  Solving for phi, Initial residual = 0.000260821, Final residual = 4.51306e-05, No Iterations 14
+ExecutionTime = 1.42 s  ClockTime = 2 s
+
+Iteration = 0.013
+
+DICPCG:  Solving for phi, Initial residual = 0.000280225, Final residual = 5.51433e-05, No Iterations 4
+ExecutionTime = 1.43 s  ClockTime = 2 s
+
+Iteration = 0.01305
+
+DICPCG:  Solving for phi, Initial residual = 0.000264713, Final residual = 4.85544e-05, No Iterations 4
+ExecutionTime = 1.43 s  ClockTime = 2 s
+
+Iteration = 0.0131
+
+DICPCG:  Solving for phi, Initial residual = 0.000259194, Final residual = 5.11241e-05, No Iterations 8
+ExecutionTime = 1.43 s  ClockTime = 2 s
+
+Iteration = 0.01315
+
+DICPCG:  Solving for phi, Initial residual = 0.000254125, Final residual = 4.71711e-05, No Iterations 3
+ExecutionTime = 1.43 s  ClockTime = 2 s
+
+Iteration = 0.0132
+
+DICPCG:  Solving for phi, Initial residual = 0.000254568, Final residual = 4.34167e-05, No Iterations 14
+ExecutionTime = 1.45 s  ClockTime = 2 s
+
+Iteration = 0.01325
+
+DICPCG:  Solving for phi, Initial residual = 0.000284553, Final residual = 5.15164e-05, No Iterations 4
+ExecutionTime = 1.45 s  ClockTime = 2 s
+
+Iteration = 0.0133
+
+DICPCG:  Solving for phi, Initial residual = 0.00025836, Final residual = 4.92253e-05, No Iterations 4
+ExecutionTime = 1.45 s  ClockTime = 2 s
+
+Iteration = 0.01335
+
+DICPCG:  Solving for phi, Initial residual = 0.000253385, Final residual = 4.69133e-05, No Iterations 11
+ExecutionTime = 1.46 s  ClockTime = 2 s
+
+Iteration = 0.0134
+
+DICPCG:  Solving for phi, Initial residual = 0.00025383, Final residual = 4.68733e-05, No Iterations 4
+ExecutionTime = 1.46 s  ClockTime = 2 s
+
+Iteration = 0.01345
+
+DICPCG:  Solving for phi, Initial residual = 0.000251727, Final residual = 4.52653e-05, No Iterations 11
+ExecutionTime = 1.46 s  ClockTime = 2 s
+
+Iteration = 0.0135
+
+DICPCG:  Solving for phi, Initial residual = 0.000255438, Final residual = 4.68087e-05, No Iterations 4
+ExecutionTime = 1.46 s  ClockTime = 2 s
+
+Iteration = 0.01355
+
+DICPCG:  Solving for phi, Initial residual = 0.000250476, Final residual = 4.98363e-05, No Iterations 6
+ExecutionTime = 1.48 s  ClockTime = 2 s
+
+Iteration = 0.0136
+
+DICPCG:  Solving for phi, Initial residual = 0.00024698, Final residual = 4.5997e-05, No Iterations 11
+ExecutionTime = 1.48 s  ClockTime = 2 s
+
+Iteration = 0.01365
+
+DICPCG:  Solving for phi, Initial residual = 0.000256854, Final residual = 4.9242e-05, No Iterations 4
+ExecutionTime = 1.48 s  ClockTime = 2 s
+
+Iteration = 0.0137
+
+DICPCG:  Solving for phi, Initial residual = 0.000249762, Final residual = 4.52079e-05, No Iterations 6
+ExecutionTime = 1.48 s  ClockTime = 2 s
+
+Iteration = 0.01375
+
+DICPCG:  Solving for phi, Initial residual = 0.000244247, Final residual = 4.86018e-05, No Iterations 11
+ExecutionTime = 1.49 s  ClockTime = 2 s
+
+Iteration = 0.0138
+
+DICPCG:  Solving for phi, Initial residual = 0.000256582, Final residual = 5.01388e-05, No Iterations 5
+ExecutionTime = 1.49 s  ClockTime = 2 s
+
+Iteration = 0.01385
+
+DICPCG:  Solving for phi, Initial residual = 0.00024184, Final residual = 4.08846e-05, No Iterations 6
+ExecutionTime = 1.51 s  ClockTime = 2 s
+
+Iteration = 0.0139
+
+DICPCG:  Solving for phi, Initial residual = 0.000237661, Final residual = 4.56043e-05, No Iterations 6
+ExecutionTime = 1.51 s  ClockTime = 2 s
+
+Iteration = 0.01395
+
+DICPCG:  Solving for phi, Initial residual = 0.000239582, Final residual = 3.06613e-05, No Iterations 14
+ExecutionTime = 1.51 s  ClockTime = 2 s
+
+Iteration = 0.014
+
+DICPCG:  Solving for phi, Initial residual = 0.000265453, Final residual = 5.08397e-05, No Iterations 4
+ExecutionTime = 1.51 s  ClockTime = 2 s
+
+Iteration = 0.01405
+
+DICPCG:  Solving for phi, Initial residual = 0.000239175, Final residual = 3.74153e-05, No Iterations 6
+ExecutionTime = 1.53 s  ClockTime = 2 s
+
+Iteration = 0.0141
+
+DICPCG:  Solving for phi, Initial residual = 0.000238392, Final residual = 3.98439e-05, No Iterations 6
+ExecutionTime = 1.53 s  ClockTime = 2 s
+
+Iteration = 0.01415
+
+DICPCG:  Solving for phi, Initial residual = 0.000232467, Final residual = 4.38922e-05, No Iterations 6
+ExecutionTime = 1.53 s  ClockTime = 2 s
+
+Iteration = 0.0142
+
+DICPCG:  Solving for phi, Initial residual = 0.000233622, Final residual = 4.65287e-05, No Iterations 6
+ExecutionTime = 1.55 s  ClockTime = 2 s
+
+Iteration = 0.01425
+
+DICPCG:  Solving for phi, Initial residual = 0.000231602, Final residual = 3.24829e-05, No Iterations 14
+ExecutionTime = 1.55 s  ClockTime = 2 s
+
+Iteration = 0.0143
+
+DICPCG:  Solving for phi, Initial residual = 0.00026126, Final residual = 5.0507e-05, No Iterations 5
+ExecutionTime = 1.55 s  ClockTime = 2 s
+
+Iteration = 0.01435
+
+DICPCG:  Solving for phi, Initial residual = 0.000232987, Final residual = 3.40397e-05, No Iterations 6
+ExecutionTime = 1.55 s  ClockTime = 2 s
+
+Iteration = 0.0144
+
+DICPCG:  Solving for phi, Initial residual = 0.000226357, Final residual = 3.67456e-05, No Iterations 6
+ExecutionTime = 1.56 s  ClockTime = 2 s
+
+Iteration = 0.01445
+
+DICPCG:  Solving for phi, Initial residual = 0.000226299, Final residual = 3.94591e-05, No Iterations 6
+ExecutionTime = 1.56 s  ClockTime = 2 s
+
+Iteration = 0.0145
+
+DICPCG:  Solving for phi, Initial residual = 0.000224774, Final residual = 4.23195e-05, No Iterations 6
+ExecutionTime = 1.56 s  ClockTime = 2 s
+
+Iteration = 0.01455
+
+DICPCG:  Solving for phi, Initial residual = 0.000224288, Final residual = 4.4331e-05, No Iterations 6
+ExecutionTime = 1.58 s  ClockTime = 2 s
+
+Iteration = 0.0146
+
+DICPCG:  Solving for phi, Initial residual = 0.000223137, Final residual = 4.30266e-05, No Iterations 13
+ExecutionTime = 1.58 s  ClockTime = 2 s
+
+Iteration = 0.01465
+
+DICPCG:  Solving for phi, Initial residual = 0.000248613, Final residual = 4.44819e-05, No Iterations 5
+ExecutionTime = 1.58 s  ClockTime = 2 s
+
+Iteration = 0.0147
+
+DICPCG:  Solving for phi, Initial residual = 0.000224892, Final residual = 4.16637e-05, No Iterations 5
+ExecutionTime = 1.59 s  ClockTime = 2 s
+
+Iteration = 0.01475
+
+DICPCG:  Solving for phi, Initial residual = 0.000212796, Final residual = 4.09133e-05, No Iterations 5
+ExecutionTime = 1.59 s  ClockTime = 2 s
+
+Iteration = 0.0148
+
+DICPCG:  Solving for phi, Initial residual = 0.000211205, Final residual = 4.15513e-05, No Iterations 5
+ExecutionTime = 1.59 s  ClockTime = 2 s
+
+Iteration = 0.01485
+
+DICPCG:  Solving for phi, Initial residual = 0.000209235, Final residual = 3.58566e-05, No Iterations 6
+ExecutionTime = 1.59 s  ClockTime = 2 s
+
+Iteration = 0.0149
+
+DICPCG:  Solving for phi, Initial residual = 0.000209624, Final residual = 3.91923e-05, No Iterations 6
+ExecutionTime = 1.61 s  ClockTime = 2 s
+
+Iteration = 0.01495
+
+DICPCG:  Solving for phi, Initial residual = 0.000213352, Final residual = 3.99199e-05, No Iterations 6
+ExecutionTime = 1.61 s  ClockTime = 2 s
+
+Iteration = 0.015
+
+DICPCG:  Solving for phi, Initial residual = 0.000212772, Final residual = 4.18628e-05, No Iterations 6
+ExecutionTime = 1.63 s  ClockTime = 2 s
+
+Iteration = 0.01505
+
+DICPCG:  Solving for phi, Initial residual = 0.000214438, Final residual = 4.21528e-05, No Iterations 6
+ExecutionTime = 1.63 s  ClockTime = 2 s
+
+Iteration = 0.0151
+
+DICPCG:  Solving for phi, Initial residual = 0.000213747, Final residual = 3.94243e-05, No Iterations 13
+ExecutionTime = 1.63 s  ClockTime = 2 s
+
+Iteration = 0.01515
+
+DICPCG:  Solving for phi, Initial residual = 0.000240924, Final residual = 3.72078e-05, No Iterations 5
+ExecutionTime = 1.65 s  ClockTime = 2 s
+
+Iteration = 0.0152
+
+DICPCG:  Solving for phi, Initial residual = 0.000215662, Final residual = 3.27765e-05, No Iterations 5
+ExecutionTime = 1.65 s  ClockTime = 2 s
+
+Iteration = 0.01525
+
+DICPCG:  Solving for phi, Initial residual = 0.000208015, Final residual = 3.14256e-05, No Iterations 5
+ExecutionTime = 1.65 s  ClockTime = 2 s
+
+Iteration = 0.0153
+
+DICPCG:  Solving for phi, Initial residual = 0.000206648, Final residual = 3.17267e-05, No Iterations 5
+ExecutionTime = 1.65 s  ClockTime = 2 s
+
+Iteration = 0.01535
+
+DICPCG:  Solving for phi, Initial residual = 0.000206267, Final residual = 3.17842e-05, No Iterations 5
+ExecutionTime = 1.66 s  ClockTime = 2 s
+
+Iteration = 0.0154
+
+DICPCG:  Solving for phi, Initial residual = 0.00020567, Final residual = 3.16562e-05, No Iterations 5
+ExecutionTime = 1.66 s  ClockTime = 2 s
+
+Iteration = 0.01545
+
+DICPCG:  Solving for phi, Initial residual = 0.000205029, Final residual = 3.12929e-05, No Iterations 5
+ExecutionTime = 1.66 s  ClockTime = 2 s
+
+Iteration = 0.0155
+
+DICPCG:  Solving for phi, Initial residual = 0.000204231, Final residual = 3.08321e-05, No Iterations 5
+ExecutionTime = 1.66 s  ClockTime = 2 s
+
+Iteration = 0.01555
+
+DICPCG:  Solving for phi, Initial residual = 0.000203375, Final residual = 3.03919e-05, No Iterations 5
+ExecutionTime = 1.68 s  ClockTime = 2 s
+
+Iteration = 0.0156
+
+DICPCG:  Solving for phi, Initial residual = 0.000202662, Final residual = 2.99727e-05, No Iterations 5
+ExecutionTime = 1.68 s  ClockTime = 2 s
+
+Iteration = 0.01565
+
+DICPCG:  Solving for phi, Initial residual = 0.000201991, Final residual = 2.95496e-05, No Iterations 5
+ExecutionTime = 1.68 s  ClockTime = 2 s
+
+Iteration = 0.0157
+
+DICPCG:  Solving for phi, Initial residual = 0.000201551, Final residual = 2.90786e-05, No Iterations 5
+ExecutionTime = 1.7 s  ClockTime = 2 s
+
+Iteration = 0.01575
+
+DICPCG:  Solving for phi, Initial residual = 0.000201239, Final residual = 2.85804e-05, No Iterations 5
+ExecutionTime = 1.7 s  ClockTime = 2 s
+
+Iteration = 0.0158
+
+DICPCG:  Solving for phi, Initial residual = 0.000201001, Final residual = 2.80955e-05, No Iterations 5
+ExecutionTime = 1.7 s  ClockTime = 2 s
+
+Iteration = 0.01585
+
+DICPCG:  Solving for phi, Initial residual = 0.000200726, Final residual = 2.76432e-05, No Iterations 5
+ExecutionTime = 1.7 s  ClockTime = 2 s
+
+Iteration = 0.0159
+
+DICPCG:  Solving for phi, Initial residual = 0.000200316, Final residual = 2.72116e-05, No Iterations 5
+ExecutionTime = 1.71 s  ClockTime = 2 s
+
+Iteration = 0.01595
+
+DICPCG:  Solving for phi, Initial residual = 0.000199735, Final residual = 2.6782e-05, No Iterations 5
+ExecutionTime = 1.71 s  ClockTime = 2 s
+
+Iteration = 0.016
+
+DICPCG:  Solving for phi, Initial residual = 0.000198981, Final residual = 2.63654e-05, No Iterations 5
+ExecutionTime = 1.71 s  ClockTime = 2 s
+
+Iteration = 0.01605
+
+DICPCG:  Solving for phi, Initial residual = 0.000198114, Final residual = 2.5955e-05, No Iterations 5
+ExecutionTime = 1.71 s  ClockTime = 2 s
+
+Iteration = 0.0161
+
+DICPCG:  Solving for phi, Initial residual = 0.000197117, Final residual = 2.55536e-05, No Iterations 5
+ExecutionTime = 1.73 s  ClockTime = 2 s
+
+Iteration = 0.01615
+
+DICPCG:  Solving for phi, Initial residual = 0.000196048, Final residual = 2.5173e-05, No Iterations 5
+ExecutionTime = 1.73 s  ClockTime = 2 s
+
+Iteration = 0.0162
+
+DICPCG:  Solving for phi, Initial residual = 0.00019494, Final residual = 2.48314e-05, No Iterations 5
+ExecutionTime = 1.73 s  ClockTime = 2 s
+
+Iteration = 0.01625
+
+DICPCG:  Solving for phi, Initial residual = 0.000193719, Final residual = 2.45213e-05, No Iterations 5
+ExecutionTime = 1.73 s  ClockTime = 2 s
+
+Iteration = 0.0163
+
+DICPCG:  Solving for phi, Initial residual = 0.000192401, Final residual = 2.42446e-05, No Iterations 5
+ExecutionTime = 1.74 s  ClockTime = 2 s
+
+Iteration = 0.01635
+
+DICPCG:  Solving for phi, Initial residual = 0.000191178, Final residual = 2.40088e-05, No Iterations 5
+ExecutionTime = 1.74 s  ClockTime = 2 s
+
+Iteration = 0.0164
+
+DICPCG:  Solving for phi, Initial residual = 0.000189996, Final residual = 2.38026e-05, No Iterations 5
+ExecutionTime = 1.74 s  ClockTime = 2 s
+
+Iteration = 0.01645
+
+DICPCG:  Solving for phi, Initial residual = 0.000188728, Final residual = 2.36313e-05, No Iterations 5
+ExecutionTime = 1.76 s  ClockTime = 2 s
+
+Iteration = 0.0165
+
+DICPCG:  Solving for phi, Initial residual = 0.0001875, Final residual = 2.35156e-05, No Iterations 5
+ExecutionTime = 1.76 s  ClockTime = 2 s
+
+Iteration = 0.01655
+
+DICPCG:  Solving for phi, Initial residual = 0.000186264, Final residual = 2.34647e-05, No Iterations 5
+ExecutionTime = 1.76 s  ClockTime = 2 s
+
+Iteration = 0.0166
+
+DICPCG:  Solving for phi, Initial residual = 0.000185088, Final residual = 2.34957e-05, No Iterations 5
+ExecutionTime = 1.76 s  ClockTime = 2 s
+
+Iteration = 0.01665
+
+DICPCG:  Solving for phi, Initial residual = 0.000184091, Final residual = 2.3598e-05, No Iterations 5
+ExecutionTime = 1.77 s  ClockTime = 2 s
+
+Iteration = 0.0167
+
+DICPCG:  Solving for phi, Initial residual = 0.000183464, Final residual = 2.37742e-05, No Iterations 5
+ExecutionTime = 1.77 s  ClockTime = 2 s
+
+Iteration = 0.01675
+
+DICPCG:  Solving for phi, Initial residual = 0.000183017, Final residual = 2.39968e-05, No Iterations 5
+ExecutionTime = 1.77 s  ClockTime = 2 s
+
+Iteration = 0.0168
+
+DICPCG:  Solving for phi, Initial residual = 0.000182978, Final residual = 2.42522e-05, No Iterations 5
+ExecutionTime = 1.77 s  ClockTime = 2 s
+
+Iteration = 0.01685
+
+DICPCG:  Solving for phi, Initial residual = 0.000183056, Final residual = 2.45683e-05, No Iterations 5
+ExecutionTime = 1.77 s  ClockTime = 2 s
+
+Iteration = 0.0169
+
+DICPCG:  Solving for phi, Initial residual = 0.000183117, Final residual = 2.49215e-05, No Iterations 5
+ExecutionTime = 1.79 s  ClockTime = 2 s
+
+Iteration = 0.01695
+
+DICPCG:  Solving for phi, Initial residual = 0.00018312, Final residual = 2.5307e-05, No Iterations 5
+ExecutionTime = 1.79 s  ClockTime = 2 s
+
+Iteration = 0.017
+
+DICPCG:  Solving for phi, Initial residual = 0.000183085, Final residual = 2.5739e-05, No Iterations 5
+ExecutionTime = 1.79 s  ClockTime = 2 s
+
+Iteration = 0.01705
+
+DICPCG:  Solving for phi, Initial residual = 0.000183039, Final residual = 2.62246e-05, No Iterations 5
+ExecutionTime = 1.81 s  ClockTime = 2 s
+
+Iteration = 0.0171
+
+DICPCG:  Solving for phi, Initial residual = 0.000183071, Final residual = 2.67606e-05, No Iterations 5
+ExecutionTime = 1.81 s  ClockTime = 2 s
+
+Iteration = 0.01715
+
+DICPCG:  Solving for phi, Initial residual = 0.000183099, Final residual = 2.73418e-05, No Iterations 5
+ExecutionTime = 1.81 s  ClockTime = 2 s
+
+Iteration = 0.0172
+
+DICPCG:  Solving for phi, Initial residual = 0.000183232, Final residual = 2.79761e-05, No Iterations 5
+ExecutionTime = 1.81 s  ClockTime = 2 s
+
+Iteration = 0.01725
+
+DICPCG:  Solving for phi, Initial residual = 0.000183427, Final residual = 2.86852e-05, No Iterations 5
+ExecutionTime = 1.83 s  ClockTime = 2 s
+
+Iteration = 0.0173
+
+DICPCG:  Solving for phi, Initial residual = 0.000183694, Final residual = 2.94737e-05, No Iterations 5
+ExecutionTime = 1.83 s  ClockTime = 2 s
+
+Iteration = 0.01735
+
+DICPCG:  Solving for phi, Initial residual = 0.000184025, Final residual = 3.03355e-05, No Iterations 5
+ExecutionTime = 1.83 s  ClockTime = 2 s
+
+Iteration = 0.0174
+
+DICPCG:  Solving for phi, Initial residual = 0.000184573, Final residual = 3.12737e-05, No Iterations 5
+ExecutionTime = 1.84 s  ClockTime = 2 s
+
+Iteration = 0.01745
+
+DICPCG:  Solving for phi, Initial residual = 0.000185182, Final residual = 3.22982e-05, No Iterations 5
+ExecutionTime = 1.84 s  ClockTime = 2 s
+
+Iteration = 0.0175
+
+DICPCG:  Solving for phi, Initial residual = 0.000185903, Final residual = 3.34481e-05, No Iterations 5
+ExecutionTime = 1.84 s  ClockTime = 2 s
+
+Iteration = 0.01755
+
+DICPCG:  Solving for phi, Initial residual = 0.000186725, Final residual = 3.47101e-05, No Iterations 5
+ExecutionTime = 1.84 s  ClockTime = 2 s
+
+Iteration = 0.0176
+
+DICPCG:  Solving for phi, Initial residual = 0.000187589, Final residual = 3.61207e-05, No Iterations 5
+ExecutionTime = 1.86 s  ClockTime = 2 s
+
+Iteration = 0.01765
+
+DICPCG:  Solving for phi, Initial residual = 0.000188626, Final residual = 3.76822e-05, No Iterations 5
+ExecutionTime = 1.86 s  ClockTime = 2 s
+
+Iteration = 0.0177
+
+DICPCG:  Solving for phi, Initial residual = 0.000189715, Final residual = 3.63087e-05, No Iterations 6
+ExecutionTime = 1.86 s  ClockTime = 2 s
+
+Iteration = 0.01775
+
+DICPCG:  Solving for phi, Initial residual = 0.000192013, Final residual = 3.75994e-05, No Iterations 7
+ExecutionTime = 1.86 s  ClockTime = 2 s
+
+Iteration = 0.0178
+
+DICPCG:  Solving for phi, Initial residual = 0.000190617, Final residual = 3.63284e-05, No Iterations 3
+ExecutionTime = 1.86 s  ClockTime = 2 s
+
+Iteration = 0.01785
+
+DICPCG:  Solving for phi, Initial residual = 0.000189677, Final residual = 3.72424e-05, No Iterations 11
+ExecutionTime = 1.86 s  ClockTime = 2 s
+
+Iteration = 0.0179
+
+DICPCG:  Solving for phi, Initial residual = 0.000205285, Final residual = 3.73547e-05, No Iterations 3
+ExecutionTime = 1.86 s  ClockTime = 2 s
+
+Iteration = 0.01795
+
+DICPCG:  Solving for phi, Initial residual = 0.000197614, Final residual = 3.08709e-05, No Iterations 3
+ExecutionTime = 1.87 s  ClockTime = 2 s
+
+Iteration = 0.018
+
+DICPCG:  Solving for phi, Initial residual = 0.00019332, Final residual = 3.01751e-05, No Iterations 3
+ExecutionTime = 1.87 s  ClockTime = 2 s
+
+Iteration = 0.01805
+
+DICPCG:  Solving for phi, Initial residual = 0.000192194, Final residual = 3.19839e-05, No Iterations 3
+ExecutionTime = 1.87 s  ClockTime = 2 s
+
+Iteration = 0.0181
+
+DICPCG:  Solving for phi, Initial residual = 0.000192596, Final residual = 3.53762e-05, No Iterations 3
+ExecutionTime = 1.87 s  ClockTime = 2 s
+
+Iteration = 0.01815
+
+DICPCG:  Solving for phi, Initial residual = 0.000195209, Final residual = 3.82001e-05, No Iterations 3
+ExecutionTime = 1.87 s  ClockTime = 2 s
+
+Iteration = 0.0182
+
+DICPCG:  Solving for phi, Initial residual = 0.000197301, Final residual = 2.79791e-05, No Iterations 14
+ExecutionTime = 1.89 s  ClockTime = 2 s
+
+Iteration = 0.01825
+
+DICPCG:  Solving for phi, Initial residual = 0.000232152, Final residual = 4.22514e-05, No Iterations 4
+ExecutionTime = 1.89 s  ClockTime = 2 s
+
+Iteration = 0.0183
+
+DICPCG:  Solving for phi, Initial residual = 0.000204323, Final residual = 3.46169e-05, No Iterations 3
+ExecutionTime = 1.89 s  ClockTime = 2 s
+
+Iteration = 0.01835
+
+DICPCG:  Solving for phi, Initial residual = 0.000199031, Final residual = 3.37282e-05, No Iterations 3
+ExecutionTime = 1.89 s  ClockTime = 2 s
+
+Iteration = 0.0184
+
+DICPCG:  Solving for phi, Initial residual = 0.000196019, Final residual = 3.47563e-05, No Iterations 3
+ExecutionTime = 1.89 s  ClockTime = 2 s
+
+Iteration = 0.01845
+
+DICPCG:  Solving for phi, Initial residual = 0.00019341, Final residual = 3.67514e-05, No Iterations 3
+ExecutionTime = 1.89 s  ClockTime = 2 s
+
+Iteration = 0.0185
+
+DICPCG:  Solving for phi, Initial residual = 0.000191177, Final residual = 3.08355e-05, No Iterations 14
+ExecutionTime = 1.9 s  ClockTime = 2 s
+
+Iteration = 0.01855
+
+DICPCG:  Solving for phi, Initial residual = 0.00022914, Final residual = 4.27412e-05, No Iterations 6
+ExecutionTime = 1.9 s  ClockTime = 2 s
+
+Iteration = 0.0186
+
+DICPCG:  Solving for phi, Initial residual = 0.000213051, Final residual = 3.79142e-05, No Iterations 3
+ExecutionTime = 1.92 s  ClockTime = 2 s
+
+Iteration = 0.01865
+
+DICPCG:  Solving for phi, Initial residual = 0.000199107, Final residual = 3.86976e-05, No Iterations 3
+ExecutionTime = 1.92 s  ClockTime = 2 s
+
+Iteration = 0.0187
+
+DICPCG:  Solving for phi, Initial residual = 0.000194937, Final residual = 3.4983e-05, No Iterations 14
+ExecutionTime = 1.92 s  ClockTime = 2 s
+
+Iteration = 0.01875
+
+DICPCG:  Solving for phi, Initial residual = 0.000216177, Final residual = 4.18494e-05, No Iterations 4
+ExecutionTime = 1.93 s  ClockTime = 2 s
+
+Iteration = 0.0188
+
+DICPCG:  Solving for phi, Initial residual = 0.000199194, Final residual = 3.83781e-05, No Iterations 4
+ExecutionTime = 1.93 s  ClockTime = 2 s
+
+Iteration = 0.01885
+
+DICPCG:  Solving for phi, Initial residual = 0.000196889, Final residual = 3.4982e-05, No Iterations 11
+ExecutionTime = 1.93 s  ClockTime = 3 s
+
+Iteration = 0.0189
+
+DICPCG:  Solving for phi, Initial residual = 0.000197318, Final residual = 3.49035e-05, No Iterations 4
+ExecutionTime = 1.94 s  ClockTime = 3 s
+
+Iteration = 0.01895
+
+DICPCG:  Solving for phi, Initial residual = 0.000195012, Final residual = 3.38399e-05, No Iterations 11
+ExecutionTime = 1.94 s  ClockTime = 3 s
+
+Iteration = 0.019
+
+DICPCG:  Solving for phi, Initial residual = 0.000197617, Final residual = 3.49943e-05, No Iterations 4
+ExecutionTime = 1.94 s  ClockTime = 3 s
+
+Iteration = 0.01905
+
+DICPCG:  Solving for phi, Initial residual = 0.000193429, Final residual = 3.86436e-05, No Iterations 4
+ExecutionTime = 1.94 s  ClockTime = 3 s
+
+Iteration = 0.0191
+
+DICPCG:  Solving for phi, Initial residual = 0.000193549, Final residual = 3.54342e-05, No Iterations 11
+ExecutionTime = 1.94 s  ClockTime = 3 s
+
+Iteration = 0.01915
+
+DICPCG:  Solving for phi, Initial residual = 0.000199513, Final residual = 3.92429e-05, No Iterations 4
+ExecutionTime = 1.94 s  ClockTime = 3 s
+
+Iteration = 0.0192
+
+DICPCG:  Solving for phi, Initial residual = 0.000193646, Final residual = 3.6209e-05, No Iterations 6
+ExecutionTime = 1.94 s  ClockTime = 3 s
+
+Iteration = 0.01925
+
+DICPCG:  Solving for phi, Initial residual = 0.00019269, Final residual = 3.65387e-05, No Iterations 11
+ExecutionTime = 1.96 s  ClockTime = 3 s
+
+Iteration = 0.0193
+
+DICPCG:  Solving for phi, Initial residual = 0.000200963, Final residual = 3.93071e-05, No Iterations 5
+ExecutionTime = 1.96 s  ClockTime = 3 s
+
+Iteration = 0.01935
+
+DICPCG:  Solving for phi, Initial residual = 0.000190955, Final residual = 3.12706e-05, No Iterations 6
+ExecutionTime = 1.96 s  ClockTime = 3 s
+
+Iteration = 0.0194
+
+DICPCG:  Solving for phi, Initial residual = 0.000188425, Final residual = 3.51893e-05, No Iterations 6
+ExecutionTime = 1.96 s  ClockTime = 3 s
+
+Iteration = 0.01945
+
+DICPCG:  Solving for phi, Initial residual = 0.000190314, Final residual = 3.77813e-05, No Iterations 6
+ExecutionTime = 1.98 s  ClockTime = 3 s
+
+Iteration = 0.0195
+
+DICPCG:  Solving for phi, Initial residual = 0.000188973, Final residual = 2.45411e-05, No Iterations 14
+ExecutionTime = 1.98 s  ClockTime = 3 s
+
+Iteration = 0.01955
+
+DICPCG:  Solving for phi, Initial residual = 0.000213237, Final residual = 4.24672e-05, No Iterations 4
+ExecutionTime = 1.98 s  ClockTime = 3 s
+
+Iteration = 0.0196
+
+DICPCG:  Solving for phi, Initial residual = 0.000192335, Final residual = 2.99791e-05, No Iterations 6
+ExecutionTime = 1.99 s  ClockTime = 3 s
+
+Iteration = 0.01965
+
+DICPCG:  Solving for phi, Initial residual = 0.000189171, Final residual = 3.15183e-05, No Iterations 6
+ExecutionTime = 1.99 s  ClockTime = 3 s
+
+Iteration = 0.0197
+
+DICPCG:  Solving for phi, Initial residual = 0.000184658, Final residual = 3.401e-05, No Iterations 6
+ExecutionTime = 1.99 s  ClockTime = 3 s
+
+Iteration = 0.01975
+
+DICPCG:  Solving for phi, Initial residual = 0.000185084, Final residual = 3.5737e-05, No Iterations 6
+ExecutionTime = 2.01 s  ClockTime = 3 s
+
+Iteration = 0.0198
+
+DICPCG:  Solving for phi, Initial residual = 0.000183534, Final residual = 2.51721e-05, No Iterations 14
+ExecutionTime = 2.01 s  ClockTime = 3 s
+
+Iteration = 0.01985
+
+DICPCG:  Solving for phi, Initial residual = 0.000207946, Final residual = 3.95546e-05, No Iterations 5
+ExecutionTime = 2.01 s  ClockTime = 3 s
+
+Iteration = 0.0199
+
+DICPCG:  Solving for phi, Initial residual = 0.000184854, Final residual = 2.67973e-05, No Iterations 6
+ExecutionTime = 2.02 s  ClockTime = 3 s
+
+Iteration = 0.01995
+
+DICPCG:  Solving for phi, Initial residual = 0.000182195, Final residual = 2.87227e-05, No Iterations 6
+ExecutionTime = 2.02 s  ClockTime = 3 s
+
+Iteration = 0.02
+
+DICPCG:  Solving for phi, Initial residual = 0.000180335, Final residual = 3.15867e-05, No Iterations 6
+ExecutionTime = 2.02 s  ClockTime = 3 s
+
+End
+

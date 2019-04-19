@@ -1,0 +1,187 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+19
+//20
+(
+    strip0
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       25500;
+        //inGroups        1 ( fixedValue );
+    }
+    
+    strip1
+    {
+        type            fixedValue;
+        ingroups        -1(fixedValue);
+        nFaces          100;
+        startFace       26000;
+        //27400
+        //inGroups      1 ( fixedValue );
+    }
+    /**/
+    back1
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       25600;
+        inGroups        1 ( fixedValue );
+    }
+    back2
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       25700;
+        inGroups        1 ( fixedValue );
+    }
+    back3
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       25800;
+        inGroups        1 ( fixedValue );
+    }
+    back4
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       25900;
+        inGroups        1 ( fixedValue );
+    }
+    /*
+    back5
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26000;
+        inGroups        1 ( fixedValue );
+    }
+    /**/
+    back6
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26100;
+        inGroups        1 ( fixedValue );
+    }
+    back7
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26200;
+        inGroups        1 ( fixedValue );
+    }
+    back8
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26300;
+        inGroups        1 ( fixedValue );
+    }
+    back9
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26400;
+        inGroups        1 ( fixedValue );
+    }
+    front1
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26500;
+        inGroups        1 ( fixedValue );
+    }
+    front2
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26600;
+        inGroups        1 ( fixedValue );
+    }
+    front3
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26700;
+        inGroups        1 ( fixedValue );
+    }
+    front4
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26800;
+        inGroups        1 ( fixedValue );
+    }
+    front6
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       26900;
+        inGroups        1 ( fixedValue );
+    }
+    front7
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       27000;
+        inGroups        1 ( fixedValue );
+    }
+    front8
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       27100;
+        inGroups        1 ( fixedValue );
+    }
+    front9
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          100;
+        startFace       27200;
+        inGroups        1 ( fixedValue );
+    }
+    defaultFaces
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          1200;
+        startFace       27300;
+    }
+)
+
+// ************************************************************************* //

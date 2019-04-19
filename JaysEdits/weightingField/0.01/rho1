@@ -1,0 +1,121 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0.01";
+    object      rho1;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 -3 1 0 0 1 0];
+
+internalField   uniform 0.001259;
+
+boundaryField
+{
+    strip0
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    strip1
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    back1
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    back2
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    back3
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    back4
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    back6
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    back7
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    back8
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    back9
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    front1
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    front2
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    front3
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    front4
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    front6
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    front7
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    front8
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    front9
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    defaultFaces
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //
