@@ -1,0 +1,186 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      phi;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 2 -3 0 0 -1 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+
+/*
+    side1
+    {
+        type            symmetryPlane;
+    }
+
+    side2
+    {
+        type            symmetryPlane;
+    }
+
+    side3
+    {
+        type            symmetryPlane;
+    }
+
+    side4
+    {
+        type            symmetryPlane;
+    }
+
+
+
+		front
+    {
+        type            fixedValue;
+				value						uniform 0;
+    }
+
+		back
+		{
+				type 						fixedValue;
+				value						uniform 0;
+		}
+*/
+		strip0
+		{
+				type						fixedValue;
+				value						uniform 1.0;
+		}
+		strip1
+		{
+				type						fixedValue;
+				value						uniform -1.0;
+		}
+
+/**/
+
+    back1
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    back2
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    back3
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+
+		back4
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+/*
+    back5
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+/**/
+
+    back6
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+
+    back7
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    back8
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    back9
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    front1
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    front2
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    front3
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    
+    front4
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    front6
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    
+    front7
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    front8
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    
+    front9
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+
+
+    defaultFaces
+    {
+        type            empty;
+    }
+}
+
+// ************************************************************************* //

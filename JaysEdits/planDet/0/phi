@@ -1,0 +1,94 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      phi;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 2 -3 0 0 -1 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    side1
+    {
+        type            zeroGradient;
+    }
+
+    side2
+    {
+        type            zeroGradient;
+    }
+
+    side3
+    {
+        type            zeroGradient;
+    }
+
+    side4
+    {
+        type            zeroGradient;
+    }
+
+    front
+     {
+        type      codedFixedValue;
+        value     uniform 0;
+        redirectType    frontBC;
+
+        code
+         #{
+             const fvPatch& boundaryPatch = patch();
+             const vectorField& Cf = boundaryPatch.Cf();
+
+             scalarField& field = *this;
+             field = patchInternalField();
+
+             //scalar min = 0.00325;
+             //scalar max = 0.005;
+             scalar xmin = 0.00325;
+             scalar xmax = 0.005;
+             scalar ymin = 0.00325;
+             scalar ymax = 0.005;
+             /*
+             scalar xmin = 0.00325;
+             scalar xmax = 0.005;
+             scalar ymin = 0.001;
+             scalar ymax = 0.002;
+             /**/
+
+             forAll(Cf, faceI)
+             {
+                if (
+                     (Cf[faceI].x() > xmin) &&
+                     (Cf[faceI].x() < xmax) &&
+                     (Cf[faceI].y() > ymin) &&
+                     (Cf[faceI].y() < ymax)
+                   )
+                 {
+                     field[faceI] = 1;
+                 }
+             }
+         #};
+
+                }
+
+/*
+    front
+    {
+				type      groovyBC;
+      	valueExpression "1000.0";
+				gradientExpression "0";
+				fractionExpression "( pos().x >= 0.00325 && pos().x <= 0.005  && pos().y >= 0.00325 && pos().y <= 0.07525 ) ? 1 : 0";
+	      value     uniform 0;
+		}
+/**/
+    back
+    {
+        type            fixedValue;
+				value						uniform -1000.0;
+    }
+}

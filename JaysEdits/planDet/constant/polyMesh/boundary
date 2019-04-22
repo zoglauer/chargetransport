@@ -1,0 +1,70 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+6
+(
+    side1
+    {
+        type            zeroGradient;
+        inGroups        1(zeroGradient);
+        nFaces          3000;
+        startFace       884000;
+        inGroups        1 ( zeroGradient );
+    }
+    side2
+    {
+        type            zeroGradient;
+        inGroups        1(zeroGradient);
+        nFaces          3000;
+        startFace       887000;
+        inGroups        1 ( zeroGradient );
+    }
+    side3
+    {
+        type            zeroGradient;
+        inGroups        1(zeroGradient);
+        nFaces          3000;
+        startFace       890000;
+        inGroups        1 ( zeroGradient );
+    }
+    side4
+    {
+        type            zeroGradient;
+        inGroups        1(zeroGradient);
+        nFaces          3000;
+        startFace       893000;
+        inGroups        1 ( zeroGradient );
+    }
+    front
+    {
+        type            groovyBC;
+        inGroups        1(groovyBC);
+        nFaces          10000;
+        startFace       896000;
+        inGroups        1 ( groovyBC );
+    }
+    back
+    {
+        type            fixedValue;
+        inGroups        1(fixedValue);
+        nFaces          10000;
+        startFace       906000;
+        inGroups        1 ( fixedValue );
+    }
+)
+
+// ************************************************************************* //

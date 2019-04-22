@@ -1,0 +1,1 @@
+LIB = $(PWD)/../platforms/$(WM_OPTIONS)/lib/libfrontBC_43bf39ff0df38d6ac1dcb9452712b670694f53ec
